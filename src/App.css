@@ -1,0 +1,688 @@
+.App {
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+}
+
+
+
+/* content */
+  .Logo {
+
+    position: absolute;
+    margin: 20px 20px;
+    color: #9fc131;
+    font-weight: bold;
+  }
+
+  .span1 {
+    color: #042940;
+  }
+
+  .Navigation {
+    position: absolute;
+    margin: 20px 20px;
+    right: 10px;
+  }
+
+  .Navigation a {
+    margin: 5px 5px;
+    text-decoration-line: none;
+    font-weight: bold;
+    color: #042940;
+  }
+
+  .Navigation a:hover {
+    color: #005C53;
+  }
+
+  .Pulse {
+    font-size: 100px;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    color: #9fc131;
+  }
+
+  .Header1 {
+    position: absolute;
+    font-size: 30px;
+    top: 35%;
+    left: 0;
+    right: 0;
+    color: #9fc131;
+    font-weight: bold;
+  }
+
+  .Text1 {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    color: #042940;
+    font-weight: bold;
+  }
+
+  .Text2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    color: #9fc131;
+  }
+
+  .span2 {
+    font-weight: bold;
+  }
+
+  .Join {
+    position: absolute;
+    top: 60%;
+    left: 650px;
+    right: 650px;
+    height: 30px;
+    border-radius: 20px;
+    border-style: none;
+    color: white;
+    background-color: #042940;
+  }
+/* content */
+
+/* content */
+  .MainContent {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    top: 80%;
+    left: 230px;
+  }
+
+  .content1 {
+    color: #042940;
+    margin: 10px 50px;
+    font-weight: bold;
+  }
+
+  .content1 i{
+    font-size: 70px;
+    color: #9fc131;
+  }
+
+  .content2 {
+    color: #042940;
+    margin: 10px 50px;
+    font-weight: bold;
+
+  }
+
+  .content2 i{
+    font-size: 70px;
+    color: #9fc131;
+  }
+
+  .content3 {
+    color: #042940;
+    margin: 10px 50px;
+    font-weight: bold;
+  }
+
+  .content3 i{
+    font-size: 70px;
+    color: #9fc131;
+  }
+/* content */
+
+/* content */
+
+  .InfoContent {
+    position: absolute;
+    display: flex;
+    height: 520px;
+    width: 1440px;
+    top: 120%;
+    text-align: left;
+    background-color: #042940;
+  } 
+
+  .Header2 {
+    position: absolute;
+    color: #9fc131;
+    left: 50px;
+    top: 50px;
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .Line {
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    height: 3px;
+    width: 330px;
+    background-color: white;
+  }
+
+  .InfoContent p {
+    position: absolute;
+    color: white;
+    top: 150px;
+    left: 50px;
+    width: 500px;
+  }
+
+  .ImageBox {
+    position: absolute;
+    left: 65%;
+    top: 10%;
+    height: 400px;
+    width: 400px;
+    background-color: black;
+  }
+
+/* content */
+
+/* content */
+  .ExtraContent {
+    position: absolute;
+    top: 200%;
+    text-align: left;
+    display: flex;
+    left: 300px;
+    right: 50px;
+  }
+
+  .DiamondBox {
+    position: absolute;
+    border-radius: 10px;
+    rotate: 45deg;
+    top: 120px;
+    right: 1090px;
+    height: 150px;
+    width: 150px;
+    border-color: #042940;
+    border-style: solid;
+ 
+  }
+
+  .DiamondBox1 {
+    position: absolute;
+    border-radius: 10px;
+    rotate: 45deg;
+    top: 120px;
+    right: 715px;
+    height: 150px;
+    width: 150px;
+    border-color: #042940;
+    border-style: solid;
+  }
+
+
+  .DiamondBox2 {
+    position: absolute;
+    border-radius: 10px;
+    rotate: 45deg;
+    top: 260px;
+    right: 900px;
+    height: 150px;
+    width: 150px;
+    border-color: #042940;
+    border-style: solid;
+  }
+
+  .DiamondBox3 {
+    position: absolute;
+    border-radius: 10px;
+    rotate: 45deg;
+    top: 400px;
+    right: 1090px;
+    height: 150px;
+    width: 150px;
+    border-color: #042940;
+    border-style: solid;
+  }
+
+  .DiamondBox4 {
+    position: absolute;
+    border-radius: 10px;
+    rotate: 45deg;
+    top: 400px;
+    right: 720px;
+    height: 150px;
+    width: 150px;
+    border-color: #042940;
+    border-style: solid;
+  }
+
+  .Icons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 670px;
+    width: 600px;
+    left: -200px;
+  }
+
+  .DiamondIcon1 {
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    color: #9fc131;
+  }
+
+  .DiamondIcon1 i{
+  margin: 70px 150px 70px 150px;
+  }
+
+  .DiamondIcon2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: #9fc131;
+  }
+
+  .DiamondIcon3 {
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    color: #9fc131;
+  }
+
+  .DiamondIcon3 i{
+    margin: 70px 165px 70px 150px;
+  }
+
+  .Header3 {
+    font-size: 30px;
+    font-weight: bold;
+    color:#042940;
+  }
+
+  .Line1 {
+    position: absolute;
+    height: 3px;
+    top: 50px;
+    width: 180px;
+    background-color: #042940;
+  }
+
+  .ServicesInfo {
+    position: absolute;
+    left: 500px;
+    right: 0;
+  }
+
+  .ServicesInfo p {
+    position: absolute;
+    top: 60px;
+    width: 550px;
+    font-weight: bold;
+    color: #042940;
+  }
+/* content */
+
+
+/* content */
+  .ServiceProviders {
+    position: absolute;
+    top: 300%;
+    left: 100px;
+    right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Header4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #042940;
+  }
+
+  .Line2 {
+    position: absolute;
+    height: 5px;
+    width: 300px;
+    top: 45px;
+    left: 460px;
+    background-color:#042940;
+  }
+
+  .ServiceProvidersText {
+     margin-top: 30px;
+    font-weight: bold;
+    color: #042940;
+  }
+
+  .ContentBoxs {
+    position: absolute;
+    top: 130px;
+    display: flex;
+  }
+
+  .ContentBox1 {
+    height: 500px;
+    width: 300px;
+    margin: 10px 100px 10px 10px;
+    border-radius: 20px;
+    background-color:#042940;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Box1 Content */
+  .ContentBoxImage1 {
+    position: absolute;
+    top: 15px;
+    height: 200px;
+    width: 290px;
+    border-radius: 15px;
+    background-color: white;
+  }
+
+  .ContentHeader1{
+    position: absolute;
+    top: 250px;
+    font-size: 30px;
+    color: #9fc131;
+    font-weight: bold;
+  }
+
+  .ContentBoxText1 {
+    position: absolute;
+    color: white;
+    width: 270px;
+    top: 300px;
+  }
+
+  .ContentBoxIcons {
+    position: absolute;
+    top: 470px;
+  }
+
+  .ContentBoxIcons i {
+    font-size: 25px;
+    margin: 0px 20px 0 20px;
+    color: #9fc131;
+  }
+  /* Box1 Content */
+
+  .ContentBox2 {
+    height: 500px;
+    width: 300px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 20px;
+    background-color:#042940;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Box2 Content */
+  .ContentBoxImage2 {
+    position: absolute;
+    top: 15px;
+    height: 200px;
+    width: 290px;
+    border-radius: 15px;
+    background-color: white;
+  }
+
+  .ContentHeader2{
+    position: absolute;
+    top: 250px;
+    font-size: 30px;
+    color: #9fc131;
+    font-weight: bold;
+  }
+
+  .ContentBoxText2 {
+    position: absolute;
+    color: white;
+    width: 270px;
+    top: 300px;
+  }
+
+  .ContentBoxIcons {
+    position: absolute;
+    top: 470px;
+  }
+
+  .ContentBoxIcons i {
+    font-size: 25px;
+    margin: 0px 20px 0 20px;
+    color: #9fc131;
+  }
+  /* Box2 Content */
+
+  .ContentBox3 {
+    height: 500px;
+    width: 300px;
+    margin: 10px 10px 10px 100px;
+    border-radius: 20px;
+    background-color:#042940;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   /* Box3 Content */
+   .ContentBoxImage3 {
+    position: absolute;
+    top: 15px;
+    height: 200px;
+    width: 290px;
+    border-radius: 15px;
+    background-color: white;
+  }
+
+  .ContentHeader3{
+    position: absolute;
+    top: 250px;
+    font-size: 30px;
+    color: #9fc131;
+    font-weight: bold;
+  }
+
+  .ContentBoxText3 {
+    position: absolute;
+    color: white;
+    width: 270px;
+    top: 300px;
+  }
+
+  .ContentBoxIcons {
+    position: absolute;
+    top: 470px;
+  }
+
+  .ContentBoxIcons i {
+    font-size: 25px;
+    margin: 0px 20px 0 20px;
+    color: #9fc131;
+  }
+  /* Box3 Content */
+/* content */
+
+
+/* content */
+  .ExtraContent2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #042940;
+    height: 500px;
+    top: 400%;
+    left: 0;
+    right: 0;
+  }
+
+  .ExtraContentText1 {
+    font-size: 30px;
+    color: #9fc131;
+    font-weight: bold;
+    margin-bottom: 70px;
+  }
+  .Line3 {
+    position: absolute;
+    height: 2px;
+    width: 300px;
+    top: 270px;
+    left: 550px;
+    background-color: white;
+  }
+
+  .ExtraContentText2 {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .ExtraContentButtons {
+    position: absolute;
+    top: 350px;
+  }
+
+  .SighnUp {
+    border-style: none;
+    color: #042940;
+    border-radius: 5px;
+    font-size: 10px;
+    height: 30px;
+    width: 100px;
+    margin: 10px 50px 10px 50px;
+  }
+
+  .LearnMore {
+    border-color: #9fc131;
+    background-color: transparent;
+    color: #9fc131;
+    border-radius: 5px;
+    font-size: 10px;
+    height: 30px;
+    width: 100px;
+    margin: 10px 50px 10px 50px;
+  }
+/* content */
+
+/* content */
+  .ContactUsContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    top: 500%;
+    left: 400px; 
+    position: absolute;
+  }
+
+  .ImageBox2 {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    right: -100px;
+  }
+
+  .ContactForm {
+    position: absolute;
+    background-color: #042940;
+    top: -200px;
+    left: 400px;
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #9fc131;
+  }
+
+  .Header5 {
+    position: absolute;
+    left: 150px;
+    top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #9fc131;
+  }
+
+  .ContactForm p{
+    position: absolute;
+    top: 100px;
+    color: white;
+  }
+
+  .ImageBox2 img{
+    height: 500px;
+    width: 500px;
+  }
+
+  .Inputs {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+  }
+
+  .Name {
+    width: 400px;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .Email {
+    width: 400px;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .Message {
+    height: 70px;
+    width: 400px;
+  }
+
+  .Submit {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    top: 200px;
+    left: 150px;
+    border-radius: 20px;
+    border-style: none;
+    color:#042940;
+    
+  }
+/* content */
+
+/* content */
+.FooterContent {
+  position: absolute;
+  top: 560%;
+  height: 200px;
+  left: 0;
+  right: 0;
+  background-color: #042940;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FooterIcons {
+  position: absolute;
+  top: 50px;
+}
+
+.FooterIcons i {
+  font-size: 30px;
+  margin: 10px 50px 10px 50px;
+  color: #9fc131;
+}
+
+.FooterText {
+  position: absolute;
+  top: 150px;
+  font-size: 20px;
+  color: white;
+}
+/* content */
