@@ -5,27 +5,28 @@ function App() {
   // Menu Button
   function Menu() {
     var x = document.getElementById("Nav");
-    if (x.style.display === "initial") {
+    if (x.style.display === "block") {
       x.style.display = "none";
     } else {
-      x.style.display = "initial"
+      x.style.display = "block"
     }
   }
   // Menu Button
 
   return (
     <div className="App">
+    <div className='Loading'></div>
 
     <div className='Home'>
 
       <div className='HomeContent'>
         <div className='Logo'><i class="fa-solid fa-heart-pulse"></i>MOB<span className='span1'>MED</span></div>
-        <div className='Navigation' id='Nav'><a href='#'>ABOUT</a><a href='#'>SERVICES</a><a href='#'>CONTACT</a></div>
+        <div className='Navigation' id='Nav'><div className='NavLinks'><div><a href='#'>ABOUT</a></div><div><a href='#'>SERVICES</a></div><div><a href='#'>CONTACT</a></div></div></div>
         <div className='MenuIcon' onClick={Menu}><i class="fa-solid fa-bars"></i></div>
       </div>
       
       <div className='HomeContent1'>
-        <div className='Pulse'><i class="fa-solid fa-heart-pulse"></i></div>
+        <div className='Pulse' id='Pulse'><i class="fa-solid fa-heart-pulse"></i></div>
         <div className='Header1'>YOUR DOCTOR ON HAND</div>
         <div className='Text1'>"ready to answer your call..."</div>
         <div className='Text2'>An <span className='span2'>online platform</span> made for medical services click to join.</div>
@@ -97,7 +98,7 @@ function App() {
 
             <div className='ServiceInfoText'>
               <div>
-                  <div className='Header3'>OUR SERVICS</div>
+                  <div className='Header3'>OUR SERVICES</div>
                   <div className='Line1'></div>
                   <p>
                     Elit aute tempor adipisicing sunt proident quis id deserunt aliquip cupidatat irure ipsum. Reprehenderit consequat ullamco cillum aliquip cupidatat ipsum est eiusmod nisi dolore do proident sint. Qui anim proident qui occaecat Lorem excepteur amet occaecat est.
@@ -129,46 +130,58 @@ function App() {
                   </div>
                 </div>
       <div className='ServiceProviders'>
-        
         <div className='ContentBoxs'>
+
           <div className='ContentBox1'>
-            <div className='ContentBoxImage1'></div>
-            <div className='ContentHeader1'>DOCTORS</div>
-            <p className='ContentBoxText1'> 
+            <div>
+              <div className='ContentBoxImage1'></div>
+              <div className='ContentHeader1'>DOCTORS</div>
+              <p className='ContentBoxText1'> 
                 Minim fugiat id ipsum quis laborum reprehenderit adipisicing pariatur aliquip amet.
                 Aute in exercitation nisi anim est cillum aliquip mollit tempor aliqua sint. 
-            </p>
-            <div className='ContentBoxIcons'>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
+              </p>
+              <div className='ContentBoxIcons'>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+              </div>
             </div>
+            
           </div>
           <div className='ContentBox2'>
-          <div className='ContentBoxImage2'></div>
-            <div className='ContentHeader2'>DRIVERS</div>
-            <p className='ContentBoxText2'> 
-                Minim fugiat id ipsum quis laborum reprehenderit adipisicing pariatur aliquip amet.
-                Aute in exercitation nisi anim est cillum aliquip mollit tempor aliqua sint. 
-            </p>
-            <div className='ContentBoxIcons'>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
+
+            <div>
+              <div className='ContentBoxImage2'></div>
+              <div className='ContentHeader2'>DRIVERS</div>
+              <p className='ContentBoxText2'> 
+                  Minim fugiat id ipsum quis laborum reprehenderit adipisicing pariatur aliquip amet.
+                  Aute in exercitation nisi anim est cillum aliquip mollit tempor aliqua sint. 
+              </p>
+              <div className='ContentBoxIcons'>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              </div>
             </div>
+
           </div>
+
           <div className='ContentBox3'>
-            <div className='ContentBoxImage3'></div>
-            <div className='ContentHeader3'>PHARMACISTS</div>
-            <p className='ContentBoxText3'> 
-                Minim fugiat id ipsum quis laborum reprehenderit adipisicing pariatur aliquip amet.
-                Aute in exercitation nisi anim est cillum aliquip mollit tempor aliqua sint. 
-            </p>
-            <div className='ContentBoxIcons'>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            </div>
+            <div>
+
+              <div className='ContentBoxImage3'></div>
+              <div className='ContentHeader3'>PHARMACISTS</div>
+              <p className='ContentBoxText3'> 
+                  Minim fugiat id ipsum quis laborum reprehenderit adipisicing pariatur aliquip amet.
+                  Aute in exercitation nisi anim est cillum aliquip mollit tempor aliqua sint. 
+              </p>
+              <div className='ContentBoxIcons'>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              </div>
+
+            </div>  
           </div>
         </div>
       </div>
@@ -183,7 +196,10 @@ function App() {
               <div className='Line3'></div>
               <p className='ExtraContentText2'>Occaecat nisi qui mollit voluptate voluptate id officia consectetur dolore do in.</p>
               </div>
-              <div className='ExtraContentButtons'><button className='SighnUp'>SIGN UP</button><button className='LearnMore'>LEARN MORE</button></div>
+              <div className='ExtraContentButtons'>
+                <div><button className='SignUp'>SIGN UP</button></div><br></br>
+                <div><button className='LearnMoreButton'>LEARN MORE</button></div>
+              </div>
             </div>
         </div>
          
@@ -194,14 +210,17 @@ function App() {
         <div className='ImageBox2'><img src={contact}></img></div>
         <div>
           <form className='ContactForm'>
-            <div className='Header5'>CONTACT US</div>
-            <p>Occaecat pariatur sint aliquip labore aliqua sunt id consequat do anim. Minim sunt cupidatat veniam veniam aute.</p>
-            <div className='Inputs'>
-            <input className='Name' type='text'></input><br></br>
-            <input className='Email' type='email'></input><br></br>
-            <input className='Message' type='text'></input><br></br>
-            <input className='Submit' type='submit'></input> 
-            </div>
+          
+            <div>
+                <div className='Header5'>CONTACT US</div>
+                <p>Occaecat pariatur sint aliquip labore aliqua sunt id consequat do anim. Minim sunt cupidatat veniam veniam aute.</p>
+                <div className='Inputs'>
+                  <input className='Name' type='text'></input><br></br>
+                  <input className='Email' type='email'></input><br></br>
+                  <input className='Message' type='text'></input><br></br>
+                  <input className='Submit' type='submit'></input> 
+                </div>
+              </div>
           </form>
         </div>
       </div>
@@ -209,8 +228,11 @@ function App() {
 
     <div className='footer'>
       <div className='FooterContent'>
-      <div className='FooterIcons'><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-instagram"></i></div>
-      <div className='FooterText'>© MOBMED | MOBILE MEDICATION</div>
+        <div>
+          <div className='FooterIcons'><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-instagram"></i></div>
+          <div className='FooterText'>© MOBMED | MOBILE MEDICATION</div>
+        </div>
+        
       </div>
     </div>
 

@@ -3,14 +3,19 @@
   text-align: center;
 }
 
-
-
 /* content */
   .Logo {
     position: absolute;
     margin: 20px 20px;
     color: #9fc131;
     font-weight: bold;
+    animation-name: slide-in-logo;
+    animation-duration: 2s;
+  }
+
+  @keyframes slide-in-logo {
+    from {left: -100px;}
+    to {left: 0px;}
   }
 
   .span1 {
@@ -18,9 +23,8 @@
   }
 
   .MenuIcon {
-    position: absolute;
-    left: 350px;
-    top: 15px;
+    float: right;
+    margin: 20px 20px;
     font-size: 20px;
     color: #042940;
     display: none;
@@ -29,12 +33,22 @@
   @media only screen and (max-width:800px) {
     .MenuIcon {
       display: initial;
+      margin: 20px 25px;
+    }
+  }
+
+  .NavLinks {
+    display: flex;
+  }
+
+  @media only screen and (max-width:800px) {
+    .NavLinks {
+      display: block;
     }
   }
 
   .Navigation {
     position: absolute;
-    display: flex;
     flex-direction: row;
     margin: 20px 20px;
     right: 10px;
@@ -46,11 +60,12 @@
     }
   }
 
-  @media only screen and (max-width:800px) {
+  @media only screen and (max-width:600px) {
     .Navigation {
       background-color:#042940;
+      top: 50px;
       height: 500px;
-      width: 200px;
+      width: 300px;
       border-radius: 5px;
       position: fixed;
       display: none;
@@ -75,18 +90,53 @@
   }
 
   .HomeContent1 {
-    padding-top: 100px;
+    padding-top: 300px;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @keyframes fade {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
   }
 
   .Pulse {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
     font-size: 100px;
     color: #9fc131;
+    animation-name: fall;
+    animation-duration:  1s ;
+    animation-iteration-count: infinite;
+    animation-delay: 2.9s;
+  }
+
+  @keyframes fall {
+    from {
+      font-size: 100px;
+      
+    }
+    to {
+      font-size: 90px;
+    }
   }
 
   .Header1 {
     font-size: 30px;
     color: #9fc131;
     font-weight: bold;
+  }
+
+  @media only screen and (max-width:800px) {
+    .Header1 {
+      font-size: 20px;
+    }
+
+    .Text1 {
+      font-size: 12px;
+    }
   }
 
   .Text1 {
@@ -148,11 +198,19 @@
 
 /* content */
   .MainContent {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     margin: 20px 20px;
+    animation-name: slide1;
+    animation-duration: 4s;
+  }
+
+  @keyframes slide1 {
+    from {left: -1500px; }
+    to {left: 0px;}
   }
 
   @media(max-width:800px) {
@@ -268,6 +326,7 @@
 
 /* content */
   .ExtraContent {
+    margin: 50px 50px;
     text-align: left;
     display: flex;
     justify-content: center;
@@ -317,8 +376,8 @@
     justify-content: center;
     align-items: center;
     background-color: #042940;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     rotate: 45deg;
     margin-right: 100px;
   }
@@ -344,8 +403,8 @@
     justify-content: center;
     align-items: center;
     background-color: #042940;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     rotate: 45deg;
   }
 
@@ -360,7 +419,7 @@
 
     .D3 {
         position: absolute;
-        margin-top: 800px;
+        margin-top: 750px;
         margin-left: -100px;
     }
   }
@@ -370,8 +429,8 @@
     justify-content: center;
     align-items: center;
     background-color: #042940;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     rotate: 45deg;
   }
 
@@ -397,8 +456,8 @@
     justify-content: center;
     align-items: center;
     background-color: #042940;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     rotate: 45deg;
     margin-right: 100px;
   }
@@ -424,8 +483,8 @@
     justify-content: center;
     align-items: center;
     background-color: #042940;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     rotate: 45deg;
   }
 
@@ -460,6 +519,7 @@
   }
 
   .Header3 {
+    margin-bottom: 20px;
     font-size: 30px;
     font-weight: bold;
     color:#042940;
@@ -497,7 +557,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
   }
 
   @media (max-width:800px) {
@@ -521,14 +580,21 @@
 
   .Header4 {
     font-size: 30px;
+    margin-bottom: 20px;
     font-weight: bold;
     color: #042940;
   }
 
   .Line2 {
     height: 5px;
-    width: 100px;
+    margin: 20px 20px;
     background-color:#042940;
+  }
+
+  @media only screen and (max-width:800px) {
+    .Line2 {
+        width: 350px;
+    }
   }
 
   .ServiceProvidersText {
@@ -553,12 +619,15 @@
 
   @media only screen and (max-width:800px) {
     .ContentBoxs {
-      margin-top: 200px;
+      margin-top: 800px;
     }
   }
 
   .ContentBox1 {
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
     width: 300px;
     margin: 10px 100px 10px 10px;
     border-radius: 20px;
@@ -571,14 +640,16 @@
     }
   }
 
-
   /* Box1 Content */
   .ContentBoxImage1 {
-    height: 50px;
-    width: 50px;
+    height: 200px;
+    width: 280px;
+    margin: 10px 10px;
     border-radius: 15px;
     background-color: white;
   }
+
+  
 
   .ContentHeader1{
     font-size: 30px;
@@ -588,8 +659,11 @@
 
   .ContentBoxText1 {
     color: white;
-    width: 270px;
-    top: 300px;
+    text-align: center;
+  }
+
+  .ContentBoxIcons {
+    margin: 20px 20px;
   }
 
   .ContentBoxIcons i {
@@ -600,7 +674,10 @@
   /* Box1 Content */
 
   .ContentBox2 {
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
     width: 300px;
     margin: 10px 10px 10px 10px;
     border-radius: 20px;
@@ -609,8 +686,9 @@
 
   /* Box2 Content */
   .ContentBoxImage2 {
-    height: 50px;
-    width: 50px;
+    height: 200px;
+    width: 280px;
+    margin: 10px 10px;
     border-radius: 15px;
     background-color: white;
   }
@@ -623,8 +701,6 @@
 
   .ContentBoxText2 {
     color: white;
-    width: 270px;
-    top: 300px;
   }
 
   .ContentBoxIcons i {
@@ -635,7 +711,10 @@
   /* Box2 Content */
 
   .ContentBox3 {
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
     width: 300px;
     margin: 10px 10px 10px 100px;
     border-radius: 20px;
@@ -650,8 +729,9 @@
 
    /* Box3 Content */
    .ContentBoxImage3 {
-    height: 50px;
-    width: 50px;
+    height: 200px;
+    width: 280px;
+    margin: 10px 10px;
     border-radius: 15px;
     background-color: white;
   }
@@ -664,7 +744,6 @@
 
   .ContentBoxText3 {
     color: white;
-    width: 270px;
   }
 
   .ContentBoxIcons i {
@@ -689,13 +768,13 @@
 
   @media only screen and (max-width:800px) {
     .ExtraContent2 {
-      margin-top: 250px;
+      margin-top: 800px;
     }
   }
 
   .ExtraContentHeader {
     height: 300px;
-    width: 100%;
+  
   }
 
   .ExtraContentText1 {
@@ -706,14 +785,51 @@
   }
   .Line3 {
     height: 2px;
-    width: 300px;
+    width: 700px;
+    margin: 20px 20px;
     background-color: white;
   }
 
+  @media only screen and (max-width:800px) {
+    .Line3 {
+      width: 350px;
+    }
+  }
+
   .ExtraContentText2 {
-    font-size: 20px;
+    font-size: 10px;
     color: white;
     font-weight: bold;
+  }
+
+  .SignUp {
+    border-style: none;
+    background-color: white;
+    color: #042940;
+    border-radius: 7px;
+    height: 30px;
+    width: 100px;
+  }
+
+  .LearnMoreButton {
+    border-style: solid;
+    border-color: #9fc131;
+    background-color: transparent;
+    color:#9fc131;
+    border-radius: 7px;
+    height: 30px;
+    width: 130px;
+  }
+
+  .ExtraContentButtons {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width:800px) {
+    .ExtraContentButtons {
+      display: list-item;
+    }
   }
 /* content */
 
@@ -734,18 +850,24 @@
     }
   }
 
-  .ImageBox2 {
-    height: 100px;
-    width: 100px;
-  }
-
   .ContactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #042940;
     height: 500px;
-    width: 300px;
+    width: 500px;
     border-radius: 20px;
     border-style: solid;
     border-color: #9fc131;
+  }
+
+  @media only screen and (max-width:800px) {
+    .ContactForm {
+      margin-top: 10px;
+      height: 400px;
+      width: 300px;
+    }
   }
 
   .Header5 {
@@ -758,40 +880,86 @@
     color: white;
   }
 
+  .ImageBox2 {
+    height: 500px;
+    width: 500px;
+    margin-right: 300px;
+  }
+
+  @media only screen and (max-width:800px) {
+    .ImageBox2 {
+      height: 300px;
+      width: 300px;
+      margin-right: 0px;
+      display: none;
+    }
+  }
+
   .ImageBox2 img{
-    height: 100px;
-    width: 100px;
+    height: 500px;
+    width: 500px;
+  }
+
+  @media only screen and (max-width:800px) {
+    .ImageBox2 img {
+      height: 300px;
+      width: 300px;
+    }
   }
 
   .Name {
-    width: 200px;
+    width: 400px;
     height: 30px;
     margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width:800px) {
+    .Name {
+      width: 250px;
+    }
   }
 
   .Email {
-    width: 200px;
+    width: 400px;
     height: 30px;
     margin-bottom: 20px;
   }
 
-  .Message {
-    height: 70px;
-    width: 200px;
+  @media only screen and (max-width:800px) {
+    .Email {
+      width: 250px;
+    }
   }
 
+
+  .Message {
+    height: 70px;
+    width: 400px;
+  }
+
+  @media only screen and (max-width:800px) {
+    .Message {
+      width: 250px;
+    }
+  }
+
+
   .Submit {
+    background-color: #9fc131;
+    margin-top: 30px;
     height: 30px;
     width: 100px;
-    border-radius: 20px;
+    border-radius: 10px;
     border-style: none;
     color:#042940;
-    
   }
 /* content */
 
 /* content */
 .FooterContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 50px;
   height: 200px;
   width: 100%;
