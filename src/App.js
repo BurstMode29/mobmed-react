@@ -1,5 +1,6 @@
 import './App.css';
 import contact from './images/contact_us.png';
+import arrow from './images/arrow.png';
 
 function App() {
   // Menu Button
@@ -10,8 +11,17 @@ function App() {
     } else {
       x.style.display = "block"
     }
-  }
+  };
   // Menu Button
+
+  function DropList() {
+    var y = document.getElementById("LoginDrop");
+    if (y.style.left === "-330px") {
+      y.style.left = "0px";
+    } else {
+      y.style.left = "-330px"
+    }
+  }
 
   return (
     <div className="App">
@@ -19,11 +29,38 @@ function App() {
 
     <div className='Home'>
 
-      <div className='HomeContent'>
-        <div className='Logo'><i class="fa-solid fa-heart-pulse"></i>MOB<span className='span1'>MED</span></div>
-        <div className='Navigation' id='Nav'><div className='NavLinks'><div><a href='#'>ABOUT</a></div><div><a href='#'>SERVICES</a></div><div><a href='#'>CONTACT</a></div></div></div>
-        <div className='MenuIcon' onClick={Menu}><i class="fa-solid fa-bars"></i></div>
-      </div>
+          <div className='HomeContent'>
+
+            <div className='Logo'><i class="fa-solid fa-heart-pulse"></i>MOB<span className='span1'>MED</span></div>
+
+            <div className='Navigation' id='Nav'>
+              
+                <div className='MobileNavHead'>
+                  <div className='NavLogo'><i class="fa-solid fa-heart-pulse"></i>MOB
+                  <span className='span3'>MED</span></div>
+                  <p>An <span className='span2'>online platform</span> made for medical services click to join.</p>
+                </div>
+
+                <div className='LoginMobile' onClick={DropList}>
+                    <div className='LoginDrop'><i class="fa-solid fa-user-doctor"></i></div>
+                    <div className='LoginMobileText'>LOGIN</div>
+                    <div className='LoginTransition' id='LoginDrop'></div>
+                </div>
+
+                <div className='NavLinks'>
+                 
+                  <div><a href='#'>ABOUT</a></div>
+                  <div><a href='#'>SERVICES</a></div>
+                  <div><a href='#'>CONTACT</a></div>
+                
+                
+              </div>
+            </div>
+            
+            <div className='MenuIcon' onClick={Menu}><i class="fa-solid fa-bars"></i></div>
+          </div>
+     
+     
       
       <div className='HomeContent1'>
         <div className='Pulse' id='Pulse'><i class="fa-solid fa-heart-pulse"></i></div>
@@ -43,12 +80,12 @@ function App() {
         </div>
         <div className='content2'>
             <div><i class="fa-solid fa-truck-medical"></i></div>
-            <div>DELIVERY</div>
+            <div>COURIERS</div>
             <p>Mobile doctors ready to provide<br></br>their services whenever and<br></br>wherever.</p>
             </div>
         <div className='content3'>
           <div><i class="fa-solid fa-prescription-bottle-medical"></i></div>
-          <div>MEDICATION</div>
+          <div>PHARMACIES</div>
           <p>Mobile doctors ready to provide<br></br>their services whenever and<br></br>wherever.</p>
         </div>
 
