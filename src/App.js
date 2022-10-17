@@ -1,27 +1,49 @@
 import './App.css';
 import contact from './images/contact_us.png';
-import arrow from './images/arrow.png';
 
 function App() {
   // Menu Button
   function Menu() {
     var x = document.getElementById("Nav");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+    if (x.style.left === "-350px") {
+      x.style.left = "-20px";
+      x.style.boxShadow = "2px 1px 30px #888888";
+      document.getElementById("MenuBox").style.opacity = "100%";
+      document.getElementById("MenuIcon").style.color = "white";
     } else {
-      x.style.display = "block"
+      x.style.left = "-350px"
+      x.style.boxShadow = "none";
+      document.getElementById("MenuBox").style.opacity = "0%";
+      document.getElementById("MenuIcon").style.color = "#042940";
     }
   };
   // Menu Button
 
+  // Mobile-Menu-Login 
   function DropList() {
     var y = document.getElementById("LoginDrop");
-    if (y.style.left === "-330px") {
-      y.style.left = "0px";
+    if (y.style.height === "0px") {
+      y.style.height = "200px";
+      document.getElementById("Links").style.top = "350px";
+      document.getElementById("LB1").style.left = "0px";
+      document.getElementById("LB2").style.left = "0px";
+      document.getElementById("LB3").style.left = "0px";
+      document.getElementById("LB4").style.opacity = "100%";
+      document.getElementById("LoginArrow").style.color = "#9fc131";
+      
     } else {
-      y.style.left = "-330px"
+      y.style.height = "0px"
+      document.getElementById("Links").style.top = "110px";
+      document.getElementById("LB1").style.left = "-400px";
+      document.getElementById("LB2").style.left = "-400px";
+      document.getElementById("LB3").style.left = "-400px";
+      document.getElementById("LB4").style.opacity = "0%";
+      document.getElementById("LoginArrow").style.color = "white";
+      
     }
   }
+  // Mobile-Menu-Login
+
 
   return (
     <div className="App">
@@ -41,23 +63,43 @@ function App() {
                   <p>An <span className='span2'>online platform</span> made for medical services click to join.</p>
                 </div>
 
-                <div className='LoginMobile' onClick={DropList}>
-                    <div className='LoginDrop'><i class="fa-solid fa-user-doctor"></i></div>
-                    <div className='LoginMobileText'>LOGIN</div>
-                    <div className='LoginTransition' id='LoginDrop'></div>
+                <div className='LoginMobile' >
+                    <div className='MobileLoginButton'onClick={DropList}>
+                      <div className='LoginDrop'><i class="fa-solid fa-user-doctor"></i></div>
+                      <div className='LoginMobileText'>LOGIN</div>
+                      <div className='LoginArrow' id='LoginArrow'><i class="fa-solid fa-sort"></i></div>
+                    </div>
+                    
+                    <div className='LoginTransition' id='LoginDrop'>
+                        <div className='MobileLoginContent' id='LoginContent'>
+                          <div className='LoginBox1' id='LB1'><i class="fa-solid fa-user-doctor"></i>DOCTOR</div>
+                          <div className='LoginBox2' id='LB2'><i class="fa-solid fa-truck-medical"></i>DRIVER</div>
+                          <div className='LoginBox3' id='LB3'><i class="fa-solid fa-prescription-bottle-medical"></i>PHARMACY</div>
+                          <div className='LoginBox4' id='LB4'></div>
+                        </div>
+                        
+                    </div>
                 </div>
 
-                <div className='NavLinks'>
+                <div className='NavLinks' id='Links'>
                  
                   <div><a href='#'>ABOUT</a></div>
                   <div><a href='#'>SERVICES</a></div>
                   <div><a href='#'>CONTACT</a></div>
                 
-                
-              </div>
+                </div>
+              
+                <div className='MobileMenuFooter'>
+                  <div><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-instagram"></i></div>
+                  <p>© MOBMED | MOBILE MEDICATION</p>
+                </div>
             </div>
-            
-            <div className='MenuIcon' onClick={Menu}><i class="fa-solid fa-bars"></i></div>
+
+            <div className='MenuBox' id='MenuBox'></div>
+
+            <div className='MenuIcon' id='MenuIcon' onClick={Menu}>
+              <i class="fa-solid fa-bars"></i> 
+            </div>
           </div>
      
      
@@ -68,7 +110,14 @@ function App() {
         <div className='Text1'>"ready to answer your call..."</div>
         <div className='Text2'>An <span className='span2'>online platform</span> made for medical services click to join.</div>
         <button className='Join'>JOIN</button>
+       
       </div>
+
+      
+
+       <div className='SignUpForm'>
+        <div></div>
+       </div>
       
 
       <div className='MainContent'>

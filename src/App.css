@@ -22,6 +22,7 @@
     color: #042940;
   }
 
+  /* Mobile Menu */
   .MenuIcon {
     float: right;
     margin: 20px 20px;
@@ -38,7 +39,20 @@
       right: -5px;
     }
   }
+  
+  @media only screen and (max-width:800px) {
+    .MenuBox {
+    height: 60px;
+    width: 60px;
+    background-color:#042940;
+    right: -0px;
+    opacity: 0%;
+    position: fixed;
+    transition: opacity 2s;
+  }
 
+  }
+  
   .MobileNavHead {
     position: absolute;
     background-color: white;
@@ -81,7 +95,7 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    top: 55px;
+    top: 60px;
     height: 50px;
     width: 100%;
     background-color: #042940;
@@ -94,22 +108,23 @@
     }
   }
 
-  .LoginArrow {
+  @media only screen and (max-width:800px) {
+    .LoginArrow {
     position: absolute;
-    height: 30px;
-    width: 30px;
-    top: 160px;
-    right: 10px;
-    rotate: 181deg;
+    right: 20px;
+    top: 15px;
+    color:white;
   }
+  }
+  
 
   .LoginTransition {
     position: absolute;
-    background-color:#9fc131;
+    background-color:white;
     top: 50px;
-    left: -330px;
-    height: 150px;
+    height: 0px;
     width: 100%;
+    transition: height 0.7s;
   }
 
   .LoginMobileText {
@@ -120,6 +135,7 @@
     font-size: 25px;
   }
 
+  
   .LoginDrop i{
     top: 15px;
     left: 10px;
@@ -127,6 +143,127 @@
     position: absolute;
     font-size: 20px;
   }
+
+  .LoginBox1 {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    color: #042940;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .LoginBox1 i {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+  }
+
+  .LoginBox2 {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    color: #042940;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .LoginBox2 i {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+  }
+
+  .LoginBox3 {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    color: #042940;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .LoginBox3 i {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+  }
+
+  .LoginBox4 {
+    height: 50px;
+    width: 100%;
+    background-color: #042940;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .LoginBox4 i {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width:800px) {
+    .LoginBox1 {
+      position: relative;
+      transition: left 0.2s;
+      left: -400px;
+    }
+
+    .LoginBox2 {
+      position: relative;
+      transition: left 0.4s;
+      left: -400px;
+    }
+
+    .LoginBox3 {
+      position: relative;
+      transition: left 0.6s;
+      left: -400px;
+    }
+
+    .LoginBox4 {
+      position: relative;
+      transition: opacity 0.6s;
+      opacity: 0%;
+    }
+  }
+
+  .MobileMenuFooter {
+    display: none;
+  }
+
+  @media only screen and (max-width:800px) {
+    .MobileMenuFooter {
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 760px;
+    }
+
+    .MobileMenuFooter i{
+      font-size: 20px;
+      color: #042940;
+      margin: 10px 30px 10px 30px;
+    }
+
+    .MobileMenuFooter p {
+      font-weight: bold;
+      color: #042940;
+    }
+  }
+ 
+
+   /* /Mobile Menu */
 
   .NavLinks {
     display: flex;
@@ -139,6 +276,7 @@
       top: 110px;
       left: 0;
       right: 0;
+      transition: top 0.7s;
     }
   }
 
@@ -160,12 +298,13 @@
       background-color: white;
       z-index: 1;
       top: -20px;
+      left: -350px;
       height: 845px;
       width: 330px;
       right: 40px;
       border-radius: 5px;
       position: fixed;
-      display: none;
+      transition: left 1s;
     }
   }
 
@@ -178,7 +317,7 @@
 
   @media only screen and (max-width:600px) {
     .Navigation a{
-      color: #9fc131;
+      color:#042940;
     }
   }
 
@@ -419,6 +558,18 @@
     }
   }
 
+
+.SignUpForm {
+  box-shadow: 0 0 50px grey;
+  height: 500px;
+  width: 1100px;
+  z-index: 1;
+  position: absolute;
+  left: 12%;
+  top: 20%;
+  background-color: white;
+  display: none;
+}
 /* content */
 
 /* content */
