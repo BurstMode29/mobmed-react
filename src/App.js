@@ -1,6 +1,7 @@
 import './App.css';
 import contact from './images/contact_us.png';
 
+
 function App() {
   // Menu Button
   function Menu() {
@@ -44,6 +45,32 @@ function App() {
   }
   // Mobile-Menu-Login
 
+  // Sign-Up-Forms 
+
+  // Firebase 
+
+  
+  // Firebase
+
+  function close() {
+   var c = document.getElementById("Join");
+    if (c.style.display === "block") {
+      c.style.display = "none";
+    } else {
+      c.style.display = "block";
+    }
+  }
+
+  function join() {
+    var j = document.getElementById("Join");
+    if (j.style.display === "block") {
+      j.style.display = "none";
+    } else {
+      j.style.display = "block";
+    }
+  }
+
+  // /Sign-Up-Forms
 
   return (
     <div className="App">
@@ -109,14 +136,41 @@ function App() {
         <div className='Header1'>YOUR DOCTOR ON HAND</div>
         <div className='Text1'>"ready to answer your call..."</div>
         <div className='Text2'>An <span className='span2'>online platform</span> made for medical services click to join.</div>
-        <button className='Join'>JOIN</button>
-       
+        <button className='Join' onClick={join}>JOIN</button>
       </div>
 
       
 
-       <div className='SignUpForm'>
-        <div></div>
+       <div className='SignUpForm' id='Join'>
+          <div className='CloseSignUpForm' id='close' onClick={close}><i class="fa-solid fa-xmark"></i></div>
+          <p>New to mobmed, simply sign up weather you're providing a service or seeking medical attention.</p>
+          <div className='D-and-P'>
+
+            <div className='ServiceProviderForm'>
+              <div className='FormHeader'>Sign Up</div>
+              <div className='FormText'>Provide medical services using mobile medication sign up here.</div>
+              <div className='FormInputs'>
+                <input  type='text' placeholder='Name'/><br></br>
+                <input type='text' placeholder='Surname'/><br></br>
+                <input type='email' placeholder='Email'/><br></br>
+              </div>
+                <input  className='FormButton' type='submit' placeholder='Submit'/>
+              
+              
+            </div>
+
+            <div className='PatientForm'>
+            <div className='FormHeader1'>Sign Up</div>
+              <div className='FormText1'>Looking for fast and reliable medical attention sign up here.</div>
+              <div className='FormInputs1'>
+                <input type='text' placeholder='Name'/><br></br>
+                <input type='text' placeholder='Surname'/><br></br>
+                <input type='email' placeholder='Email'/><br></br>
+              </div>
+                <input className='FormButton1' type='submit' placeholder='Submit'/>
+              
+            </div>
+          </div>
        </div>
       
 

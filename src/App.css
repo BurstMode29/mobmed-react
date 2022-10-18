@@ -407,6 +407,11 @@
     background-color: #042940;
   }
 
+  .Join:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px grey;
+  }
+
   @media only screen and (max-width:800px) {
     .Join {
       margin: 50px 50px;
@@ -429,7 +434,36 @@
   .Continue i {
     color: #9fc131;
     font-size: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 850px;
+    animation-name: PointDown;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
   }
+
+  @keyframes PointDown {
+    from {top: 850px;}
+    to {top: 860px;}
+
+  }
+
+  @media only screen and (max-width:800px){
+    .Continue i {
+      top: 1320px;
+      animation-name: PointDownMobile;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes PointDownMobile {
+      from {top: 1320px;}
+      to {top: 1330px;}
+    }
+
+  }
+
 /* content */
 
 /* content */
@@ -564,15 +598,155 @@
   height: 500px;
   width: 1100px;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   left: 12%;
   top: 20%;
   background-color: white;
   display: none;
 }
+
+.CloseSignUpForm {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.SignUpForm p {
+  position: absolute;
+  top: 10px;
+  left: 59px;
+  font-weight: bold;
+  color: grey;
+}
+
+.D-and-P {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ServiceProviderForm */
+.ServiceProviderForm {
+  height: 400px;
+  width: 400px;
+  background-color:#9fc131;
+  margin: 10px 10px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  left: 50px;
+}
+
+.FormHeader {
+  position: absolute;
+  top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.FormText {
+  position: absolute;
+  top: 70px;
+  width: 300px;
+  color: white;
+}
+
+.FormInputs {
+  position: absolute;
+  top: 130px;
+}
+
+.FormInputs input{
+  margin: 10px 10px;
+  height: 30px;
+  width: 300px;
+  border-style: none;
+}
+
+.FormInputs input[type=text]:focus {
+  border: 1px solid white;
+}
+
+.FormButton {
+  top: 330px;
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  border-style: none;
+  position: absolute;
+  color: grey;
+  cursor: pointer;
+}
+
+.FormButton:hover {
+  box-shadow: 0 0 10px grey;
+}
+
+/* ServiceProviderForm */
+
+/* PatientsForm */
+.PatientForm {
+  height: 400px;
+  width: 400px;
+  background-color:#042940;
+  margin: 10px 10px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FormHeader1 {
+  position: absolute;
+  top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.FormText1 {
+  position: absolute;
+  top: 70px;
+  width: 300px;
+  color: white;
+}
+
+.FormInputs1 {
+  position: absolute;
+  top: 130px;
+}
+
+.FormInputs1 input{
+  margin: 10px 10px;
+  height: 30px;
+  width: 300px;
+  border-style: none;
+}
+
+.FormButton1 {
+  top: 330px;
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  border-style: none;
+  position: absolute;
+  color: grey;
+  cursor: pointer;
+}
+
+.FormButton1:hover {
+  box-shadow: 0 0 10px grey;
+}
 /* content */
 
-/* content */
+/* Who Is MOBMED */
   .ExtraContent {
     margin: 50px 50px;
     text-align: left;
