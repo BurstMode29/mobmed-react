@@ -1,8 +1,36 @@
 import './App.css';
 import contact from './images/contact_us.png';
-
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import app from './firebase';
+import React, {useState} from 'react';
 
 function App() {
+  const auth = getAuth(app);
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const signUp = () => {
+    
+    // Firebase 
+      createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log(user);
+        alert("Successfully created an account")
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        // const errorMessage = error.message;
+        alert(errorCode);
+        // ..
+      });
+    // Firebase
+  }
+
+ 
+
+
   // Menu Button
   function Menu() {
     var x = document.getElementById("Nav");
@@ -47,10 +75,7 @@ function App() {
 
   // Sign-Up-Forms 
 
-  // Firebase 
-
-  
-  // Firebase
+ 
 
   function close() {
    var c = document.getElementById("Join");
@@ -150,11 +175,12 @@ function App() {
               <div className='FormHeader'>Sign Up</div>
               <div className='FormText'>Provide medical services using mobile medication sign up here.</div>
               <div className='FormInputs'>
-                <input  type='text' placeholder='Name'/><br></br>
-                <input type='text' placeholder='Surname'/><br></br>
-                <input type='email' placeholder='Email'/><br></br>
+                {/* <input  type='text' placeholder='Name'/><br></br> */}
+                {/* <input type='text' placeholder='Surname'/><br></br> */}
+                <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)}/><br></br>
+                <input type='password' placeholder='password' onChange={(e) => setPassword(e.target.value)}/><br></br>
               </div>
-                <input  className='FormButton' type='submit' placeholder='Submit'/>
+                <input onClick={signUp}  className='FormButton' type='submit' placeholder='Submit'/>
               
               
             </div>
