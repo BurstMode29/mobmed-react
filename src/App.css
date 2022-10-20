@@ -4,593 +4,622 @@
 }
 
 /* content */
-  .Logo {
-    position: absolute;
-    margin: 20px 20px;
-    color: #9fc131;
-    font-weight: bold;
-    animation-name: slide-in-logo;
-    animation-duration: 2s;
+.Logo {
+  position: absolute;
+  margin: 20px 20px;
+  color: #9fc131;
+  font-weight: bold;
+  animation-name: slide-in-logo;
+  animation-duration: 2s;
+}
+
+@keyframes slide-in-logo {
+  from {
+    left: -100px;
   }
 
-  @keyframes slide-in-logo {
-    from {left: -100px;}
-    to {left: 0px;}
+  to {
+    left: 0px;
   }
+}
 
-  .span1 {
-    color: #042940;
-  }
+.span1 {
+  color: #042940;
+}
 
-  /* Mobile Menu */
+/* Mobile Menu */
+.MenuIcon {
+  float: right;
+  margin: 20px 20px;
+  font-size: 20px;
+  color: #042940;
+  display: none;
+}
+
+@media only screen and (max-width:800px) {
   .MenuIcon {
-    float: right;
-    margin: 20px 20px;
-    font-size: 20px;
-    color:#042940;
-    display: none;
+    display: initial;
+    margin: 20px 25px;
+    position: fixed;
+    right: -5px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .MenuIcon {
-      display: initial;
-      margin: 20px 25px;
-      position: fixed;
-      right: -5px;
-    }
-  }
-  
-  @media only screen and (max-width:800px) {
-    .MenuBox {
+@media only screen and (max-width:800px) {
+  .MenuBox {
     height: 60px;
     width: 60px;
-    background-color:#042940;
+    background-color: #042940;
     right: -0px;
     opacity: 0%;
     position: fixed;
     transition: opacity 2s;
   }
 
-  }
-  
+}
+
+.MobileNavHead {
+  position: absolute;
+  background-color: white;
+  color: #042940;
+  font-weight: bold;
+  top: 0px;
+  height: 60px;
+  width: 100%;
+  display: none;
+}
+
+@media only screen and (max-width:800px) {
   .MobileNavHead {
-    position: absolute;
-    background-color: white;
-    color:#042940;
-    font-weight: bold;
-    top: 0px;
-    height: 60px;
-    width: 100%;
-    display: none;
+    display: block;
   }
-
-  @media only screen and (max-width:800px) {
-    .MobileNavHead {
-      display: block;
-    }
-  }
+}
 
 
-  .NavLogo {
-    position: absolute;
-    top: 10px;
-    left: 3px;
-    color:#042940;
-  }
+.NavLogo {
+  position: absolute;
+  top: 10px;
+  left: 3px;
+  color: #042940;
+}
 
-  .MobileNavHead i{
-    margin: 2px 2px;
-  }
+.MobileNavHead i {
+  margin: 2px 2px;
+}
 
-  .MobileNavHead p {
-    position: absolute;
-    font-weight: lighter;
-    top: 20px;
-    left: 3px;
-    font-size: 12px;
-    color:#042940;
-  }
+.MobileNavHead p {
+  position: absolute;
+  font-weight: lighter;
+  top: 20px;
+  left: 3px;
+  font-size: 12px;
+  color: #042940;
+}
 
+.LoginMobile {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 60px;
+  height: 50px;
+  width: 100%;
+  background-color: #042940;
+  display: none;
+}
+
+@media only screen and (max-width:800px) {
   .LoginMobile {
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 60px;
-    height: 50px;
-    width: 100%;
-    background-color: #042940;
-    display: none;
+    display: flex;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .LoginMobile {
-      display: flex;
-    }
-  }
-
-  @media only screen and (max-width:800px) {
-    .LoginArrow {
+@media only screen and (max-width:800px) {
+  .LoginArrow {
     position: absolute;
     right: 20px;
     top: 15px;
-    color:white;
-  }
-  }
-  
-
-  .LoginTransition {
-    position: absolute;
-    background-color:white;
-    top: 50px;
-    height: 0px;
-    width: 100%;
-    transition: height 0.7s;
-  }
-
-  .LoginMobileText {
-    position: absolute;
-    top: 10px;
-    left: 50px;
     color: white;
-    font-size: 25px;
   }
+}
 
-  
-  .LoginDrop i{
-    top: 15px;
-    left: 10px;
-    color: white;
-    position: absolute;
-    font-size: 20px;
-  }
 
+.LoginTransition {
+  position: absolute;
+  background-color: white;
+  top: 50px;
+  height: 0px;
+  width: 100%;
+  transition: height 0.7s;
+}
+
+
+
+.LoginMobileText {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  color: white;
+  font-size: 25px;
+}
+
+
+.LoginDrop i {
+  top: 15px;
+  left: 10px;
+  color: white;
+  position: absolute;
+  font-size: 20px;
+}
+
+.LoginBox1 {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  color: #042940;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.LoginBox1 i {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+}
+
+.LoginBox2 {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  color: #042940;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.LoginBox2 i {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+}
+
+.LoginBox3 {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  color: #042940;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.LoginBox3 i {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+}
+
+.LoginBox4 {
+  height: 50px;
+  width: 100%;
+  background-color: #042940;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.LoginBox4 i {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width:800px) {
   .LoginBox1 {
-    height: 50px;
-    width: 100%;
-    display: flex;
-    color: #042940;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-  }
-
-  .LoginBox1 i {
-    position: absolute;
-    left: 10px;
-    font-size: 20px;
+    position: relative;
+    transition: left 0.2s;
+    left: -400px;
   }
 
   .LoginBox2 {
-    height: 50px;
-    width: 100%;
-    display: flex;
-    color: #042940;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-  }
-
-  .LoginBox2 i {
-    position: absolute;
-    left: 10px;
-    font-size: 20px;
+    position: relative;
+    transition: left 0.4s;
+    left: -400px;
   }
 
   .LoginBox3 {
-    height: 50px;
-    width: 100%;
-    display: flex;
-    color: #042940;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-  }
-
-  .LoginBox3 i {
-    position: absolute;
-    left: 10px;
-    font-size: 20px;
+    position: relative;
+    transition: left 0.6s;
+    left: -400px;
   }
 
   .LoginBox4 {
-    height: 50px;
-    width: 100%;
-    background-color: #042940;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
+    position: relative;
+    transition: opacity 0.6s;
+    opacity: 0%;
   }
+}
 
-  .LoginBox4 i {
-    position: absolute;
-    left: 10px;
-    font-size: 20px;
-  }
+.MobileMenuFooter {
+  display: none;
+}
 
-  @media only screen and (max-width:800px) {
-    .LoginBox1 {
-      position: relative;
-      transition: left 0.2s;
-      left: -400px;
-    }
-
-    .LoginBox2 {
-      position: relative;
-      transition: left 0.4s;
-      left: -400px;
-    }
-
-    .LoginBox3 {
-      position: relative;
-      transition: left 0.6s;
-      left: -400px;
-    }
-
-    .LoginBox4 {
-      position: relative;
-      transition: opacity 0.6s;
-      opacity: 0%;
-    }
-  }
-
+@media only screen and (max-width:800px) {
   .MobileMenuFooter {
-    display: none;
-  }
-
-  @media only screen and (max-width:800px) {
-    .MobileMenuFooter {
-      position: absolute;
-      display: block;
-      left: 0;
-      right: 0;
-      top: 760px;
-    }
-
-    .MobileMenuFooter i{
-      font-size: 20px;
-      color: #042940;
-      margin: 10px 30px 10px 30px;
-    }
-
-    .MobileMenuFooter p {
-      font-weight: bold;
-      color: #042940;
-    }
-  }
- 
-
-   /* /Mobile Menu */
-
-  .NavLinks {
-    display: flex;
-  }
-
-  @media only screen and (max-width:800px) {
-    .NavLinks {
-      display: block;
-      position: absolute;
-      top: 110px;
-      left: 0;
-      right: 0;
-      transition: top 0.7s;
-    }
-  }
-
-  .Navigation { 
     position: absolute;
-    flex-direction: row;
-    margin: 20px 20px;
-    right: 10px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 760px;
   }
 
-  @media (max-width:800px) {
-    .Navigation {
-      flex-direction: column;
-    }
+  .MobileMenuFooter i {
+    font-size: 20px;
+    color: #042940;
+    margin: 10px 30px 10px 30px;
   }
 
-  @media only screen and (max-width:600px) {
-    .Navigation {
-      background-color: white;
-      z-index: 1;
-      top: -20px;
-      left: -350px;
-      height: 845px;
-      width: 330px;
-      right: 40px;
-      border-radius: 5px;
-      position: fixed;
-      transition: left 1s;
-    }
-  }
-
-  .Navigation a {
-    margin: 5px 5px;
-    text-decoration-line: none;
+  .MobileMenuFooter p {
     font-weight: bold;
     color: #042940;
   }
+}
 
-  @media only screen and (max-width:600px) {
-    .Navigation a{
-      color:#042940;
-    }
-  }
 
-  .Navigation a:hover {
-    color: #005C53;
-  }
+/* /Mobile Menu */
 
-  .HomeContent1 {
-    padding-top: 300px;
-    animation-name: fade;
-    animation-duration: 3s;
-  }
+.NavLinks {
+  display: flex;
+}
 
-  @keyframes fade {
-    from {opacity: 0%;}
-    to {opacity: 100%;}
-  }
-
-  .Pulse {
+@media only screen and (max-width:800px) {
+  .NavLinks {
+    display: block;
     position: absolute;
-    top: 150px;
+    top: 110px;
     left: 0;
     right: 0;
+    transition: top 0.7s;
+  }
+}
+
+.Navigation {
+  position: absolute;
+  flex-direction: row;
+  margin: 20px 20px;
+  right: 10px;
+}
+
+@media (max-width:800px) {
+  .Navigation {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .Navigation {
+    background-color: white;
+    z-index: 1;
+    top: -20px;
+    left: -350px;
+    height: 845px;
+    width: 330px;
+    right: 40px;
+    border-radius: 5px;
+    position: fixed;
+    transition: left 1s;
+  }
+}
+
+.Navigation a {
+  margin: 5px 5px;
+  text-decoration-line: none;
+  font-weight: bold;
+  color: #042940;
+}
+
+@media only screen and (max-width:600px) {
+  .Navigation a {
+    color: #042940;
+  }
+}
+
+.Navigation a:hover {
+  color: #005C53;
+}
+
+.HomeContent1 {
+  padding-top: 300px;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+.Pulse {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  font-size: 100px;
+  color: #9fc131;
+  animation-name: fall;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-delay: 2.9s;
+}
+
+@keyframes fall {
+  from {
     font-size: 100px;
-    color: #9fc131;
-    animation-name: fall;
-    animation-duration:  1s ;
-    animation-iteration-count: infinite;
-    animation-delay: 2.9s;
+
   }
 
-  @keyframes fall {
-    from {
-      font-size: 100px;
-      
-    }
-    to {
-      font-size: 90px;
-    }
+  to {
+    font-size: 90px;
   }
+}
 
+.Header1 {
+  font-size: 30px;
+  color: #9fc131;
+  font-weight: bold;
+}
+
+@media only screen and (max-width:800px) {
   .Header1 {
-    font-size: 30px;
-    color: #9fc131;
-    font-weight: bold;
-  }
-
-  @media only screen and (max-width:800px) {
-    .Header1 {
-      font-size: 20px;
-    }
-
-    .Text1 {
-      font-size: 12px;
-    }
+    font-size: 20px;
   }
 
   .Text1 {
-    color: #042940;
-    font-weight: bold;
+    font-size: 12px;
   }
+}
 
+.Text1 {
+  color: #042940;
+  font-weight: bold;
+}
+
+.Text2 {
+  margin: 20px 20px;
+  color: #9fc131;
+}
+
+@media only screen and (max-width:800px) {
   .Text2 {
-    margin: 20px 20px;
-    color: #9fc131;
-  }
-
-  @media only screen and (max-width:800px) {
-    .Text2 {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-size: 20px;
-    }
-  }
-
-  .span2 {
-    font-weight: bold;
-  }
-
-  .Join {
-    height: 30px;
-    width: 100px;
-    margin: 20px 20px;
-    border-radius: 20px;
-    border-style: none;
-    color: white;
-    background-color: #042940;
-  }
-
-  .Join:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px grey;
-  }
-
-  @media only screen and (max-width:800px) {
-    .Join {
-      margin: 50px 50px;
-    }
-  }
-
-  .Continue {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .Continue p {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 20px;
-    font-weight: bold;
-    color: #042940;
+  }
+}
+
+.span2 {
+  font-weight: bold;
+}
+
+.Join {
+  height: 30px;
+  width: 100px;
+  margin: 20px 20px;
+  border-radius: 20px;
+  border-style: none;
+  color: white;
+  background-color: #042940;
+}
+
+.Join:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px grey;
+}
+
+@media only screen and (max-width:800px) {
+  .Join {
+    margin: 50px 50px;
+  }
+}
+
+.Continue {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Continue p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #042940;
+}
+
+.Continue i {
+  color: #9fc131;
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 850px;
+  animation-name: PointDown;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes PointDown {
+  from {
+    top: 850px;
   }
 
+  to {
+    top: 860px;
+  }
+
+}
+
+@media only screen and (max-width:800px) {
   .Continue i {
-    color: #9fc131;
-    font-size: 30px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 850px;
-    animation-name: PointDown;
+    top: 1320px;
+    animation-name: PointDownMobile;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
   }
 
-  @keyframes PointDown {
-    from {top: 850px;}
-    to {top: 860px;}
-
-  }
-
-  @media only screen and (max-width:800px){
-    .Continue i {
+  @keyframes PointDownMobile {
+    from {
       top: 1320px;
-      animation-name: PointDownMobile;
-      animation-duration: 0.5s;
-      animation-iteration-count: infinite;
     }
 
-    @keyframes PointDownMobile {
-      from {top: 1320px;}
-      to {top: 1330px;}
+    to {
+      top: 1330px;
     }
-
   }
 
+}
+
 /* content */
 
 /* content */
+.MainContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px 20px;
+  animation-name: slide1;
+  animation-duration: 4s;
+}
+
+@keyframes slide1 {
+  from {
+    left: -1500px;
+  }
+
+  to {
+    left: 0px;
+  }
+}
+
+@media(max-width:600px) {
   .MainContent {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 20px 20px;
-    animation-name: slide1;
-    animation-duration: 4s;
+    flex-direction: column;
   }
+}
 
-  @keyframes slide1 {
-    from {left: -1500px; }
-    to {left: 0px;}
-  }
+.content1 {
+  color: #042940;
+  margin: 10px 50px;
+  font-weight: bold;
+}
 
-  @media(max-width:800px) {
-    .MainContent {
-      flex-direction: column;
-    }
-  }
+.content1 i {
+  font-size: 70px;
+  color: #9fc131;
+}
 
-  .content1 {
-    color: #042940;
-    margin: 10px 50px;
-    font-weight: bold;
-  }
+.content2 {
+  color: #042940;
+  margin: 10px 50px;
+  font-weight: bold;
 
-  .content1 i{
-    font-size: 70px;
-    color: #9fc131;
-  }
+}
 
-  .content2 {
-    color: #042940;
-    margin: 10px 50px;
-    font-weight: bold;
+.content2 i {
+  font-size: 70px;
+  color: #9fc131;
+}
 
-  }
+.content3 {
+  color: #042940;
+  margin: 10px 50px;
+  font-weight: bold;
+}
 
-  .content2 i{
-    font-size: 70px;
-    color: #9fc131;
-  }
+.content3 i {
+  font-size: 70px;
+  color: #9fc131;
+}
 
-  .content3 {
-    color: #042940;
-    margin: 10px 50px;
-    font-weight: bold;
-  }
-
-  .content3 i{
-    font-size: 70px;
-    color: #9fc131;
-  }
 /* content */
 
 /* content */
 
+.InfoContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 700px;
+  width: 100%;
+  text-align: left;
+  background-color: #042940;
+}
+
+@media (max-width:800px) {
   .InfoContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    height: 700px;
-    width: 100%;
-    text-align: left;
-    background-color: #042940;
-  } 
-
-  @media (max-width:800px) {
-    .InfoContent {
-      flex-direction: column;
-    }
+    flex-direction: column;
   }
+}
 
+.InfoContentText {
+  margin: 70px 100px 70px 70px;
+}
+
+@media only screen and (max-width:800px) {
   .InfoContentText {
-    margin: 70px 100px 70px 70px;
+    margin: 70px 70px 70px 70px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .InfoContentText {
-      margin: 70px 70px 70px 70px;
-    }
-  }
+.Header2 {
+  color: #9fc131;
+  font-weight: bold;
+  font-size: 30px;
+}
 
-  .Header2 {
-    color: #9fc131;
-    font-weight: bold;
-    font-size: 30px;
-  }
+.Line {
+  margin-top: 20px;
+  height: 3px;
+  width: 245px;
+  background-color: white;
+}
 
-  .Line {
-    margin-top: 20px;
-    height: 3px;
-    width: 245px;
-    background-color: white;
-  }
+.InfoContent p {
+  color: white;
+  width: 700px;
+}
 
+@media only screen and (max-width:800px) {
   .InfoContent p {
-    color: white;
-    width: 700px;
+    width: 100%;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .InfoContent p {
-      width: 100%;
-    }
-  }
+.ImageBox {
+  height: 400px;
+  width: 400px;
+  border-radius: 20px;
+  background-color: white;
+}
 
+@media only screen and (max-width:800px) {
   .ImageBox {
-    height: 400px;
-    width: 400px;
-    border-radius: 20px;
-    background-color: white;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
   }
-
-  @media only screen and (max-width:800px) {
-    .ImageBox {
-      height: 300px;
-      width: 300px;
-      margin-bottom: 20px;
-    }
-  }
+}
 
 
 .SignUpForm {
@@ -631,7 +660,7 @@
 .ServiceProviderForm {
   height: 400px;
   width: 400px;
-  background-color:#9fc131;
+  background-color: #9fc131;
   margin: 10px 10px;
   position: absolute;
   display: flex;
@@ -661,7 +690,7 @@
   top: 130px;
 }
 
-.FormInputs input{
+.FormInputs input {
   margin: 10px 10px;
   height: 30px;
   width: 300px;
@@ -693,7 +722,7 @@
 .PatientForm {
   height: 400px;
   width: 400px;
-  background-color:#042940;
+  background-color: #042940;
   margin: 10px 10px;
   position: absolute;
   top: 50px;
@@ -723,7 +752,7 @@
   top: 130px;
 }
 
-.FormInputs1 input{
+.FormInputs1 input {
   margin: 10px 10px;
   height: 30px;
   width: 300px;
@@ -744,227 +773,228 @@
 .FormButton1:hover {
   box-shadow: 0 0 10px grey;
 }
+
 /* content */
 
 /* Who Is MOBMED */
+.ExtraContent {
+  margin: 50px 50px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+@media (max-width:800px) {
   .ExtraContent {
-    margin: 50px 50px;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-
+    flex-direction: column;
   }
+}
 
-  @media (max-width:800px) {
-    .ExtraContent {
-      flex-direction: column;
-    }
-  }
 
-  
 
+.Icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 200px 50px 50px;
+}
+
+@media only screen and (max-width:800px) {
   .Icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 200px 50px 50px;
+    margin: 50px 50px 50px 50px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .Icons {
-      margin: 50px 50px 50px 50px;
-    }
-  }
+.D1 i {
+  rotate: -45deg;
+}
 
-  .D1 i{
-    rotate: -45deg;
-  }
-
-  @media only screen and (max-width:800px) {
-    .D1 i{
-      font-size: 50px;
-    }
-
-    .D1 {
-        position: absolute;
-        margin-top: 100px;
-    }
+@media only screen and (max-width:800px) {
+  .D1 i {
+    font-size: 50px;
   }
 
   .D1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #042940;
-    height: 150px;
-    width: 150px;
-    rotate: 45deg;
-    margin-right: 100px;
+    position: absolute;
+    margin-top: 100px;
   }
+}
 
-  .D2 i{
-    rotate: -45deg;
-  }
+.D1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #042940;
+  height: 150px;
+  width: 150px;
+  rotate: 45deg;
+  margin-right: 100px;
+}
 
-  @media only screen and (max-width:800px) {
-    .D2 i{
-      font-size: 50px;
-    }
+.D2 i {
+  rotate: -45deg;
+}
 
-    .D2 {
-        position: absolute;
-        margin-top: 200px;
-        margin-left: 100px;
-    }
+@media only screen and (max-width:800px) {
+  .D2 i {
+    font-size: 50px;
   }
 
   .D2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #042940;
-    height: 150px;
-    width: 150px;
-    rotate: 45deg;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 100px;
   }
+}
 
-  .D3 i{
-    rotate: -45deg;
-  }
+.D2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #042940;
+  height: 150px;
+  width: 150px;
+  rotate: 45deg;
+}
 
-  @media only screen and (max-width:800px) {
-    .D3 i{
-      font-size: 50px;
-    }
+.D3 i {
+  rotate: -45deg;
+}
 
-    .D3 {
-        position: absolute;
-        margin-top: 750px;
-        margin-left: -100px;
-    }
+@media only screen and (max-width:800px) {
+  .D3 i {
+    font-size: 50px;
   }
 
   .D3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #042940;
-    height: 150px;
-    width: 150px;
-    rotate: 45deg;
+    position: absolute;
+    margin-top: 750px;
+    margin-left: -100px;
   }
+}
 
-  .D4 i{
-    rotate: -45deg;
+.D3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #042940;
+  height: 150px;
+  width: 150px;
+  rotate: 45deg;
+}
+
+.D4 i {
+  rotate: -45deg;
+}
+
+@media only screen and (max-width:800px) {
+  .D4 i {
+    font-size: 50px;
   }
-
-  @media only screen and (max-width:800px) {
-    .D4 i{
-      font-size: 50px;
-    }
-
-    .D4 {
-        position: absolute;
-        margin-top: 400px;
-        margin-left: 200px;
-    }
-  }
-
 
   .D4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #042940;
-    height: 150px;
-    width: 150px;
-    rotate: 45deg;
-    margin-right: 100px;
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 200px;
   }
+}
 
-  .D5 i{
-    rotate: -45deg;
-  }
 
-  @media only screen and (max-width:800px) {
-    .D5 i{
-      font-size: 50px;
-    }
+.D4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #042940;
+  height: 150px;
+  width: 150px;
+  rotate: 45deg;
+  margin-right: 100px;
+}
 
-    .D5 {
-        position: absolute;
-        margin-top: 500px;
-        margin-left: -100px;
-    }
+.D5 i {
+  rotate: -45deg;
+}
+
+@media only screen and (max-width:800px) {
+  .D5 i {
+    font-size: 50px;
   }
 
   .D5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #042940;
-    height: 150px;
-    width: 150px;
-    rotate: 45deg;
+    position: absolute;
+    margin-top: 500px;
+    margin-left: -100px;
   }
+}
 
-  .DiamondIcon1 {
-    display: flex;
-    justify-content: center;
-    font-size: 70px;
-    color: #9fc131;
-  }
+.D5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #042940;
+  height: 150px;
+  width: 150px;
+  rotate: 45deg;
+}
 
-  .DiamondIcon1 i{
+.DiamondIcon1 {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  color: #9fc131;
+}
+
+.DiamondIcon1 i {
   margin: 10px 10px 10px 10px;
-  }
+}
 
-  .DiamondIcon2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 70px;
-    color: #9fc131;
-  }
+.DiamondIcon2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  color: #9fc131;
+}
 
-  .DiamondIcon3 {
-    display: flex;
-    justify-content: center;
-    font-size: 70px;
-    color: #9fc131;
-  }
+.DiamondIcon3 {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  color: #9fc131;
+}
 
-  .DiamondIcon3 i{
-    margin: 10px 10px 10px 10px;
-  }
+.DiamondIcon3 i {
+  margin: 10px 10px 10px 10px;
+}
 
+.Header3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #042940;
+
+}
+
+@media only screen and (max-width:800px) {
   .Header3 {
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    color:#042940;
-    
+    margin-top: 800px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .Header3 {
-      margin-top: 800px;
-    }
-  }
+.Line1 {
+  height: 3px;
+  width: 180px;
+  background-color: #042940;
+}
 
-  .Line1 {
-    height: 3px;
-    width: 180px;
-    background-color: #042940;
-  }
-
-  .ServicesInfo p {
-    width: 300px;
-    font-weight: bold;
-    color: #042940;
-  }
+.ServicesInfo p {
+  width: 300px;
+  font-weight: bold;
+  color: #042940;
+}
 
 
 /* content */
@@ -972,411 +1002,417 @@
 
 /* content */
 
+.ServiceProviders {
+  display: flex;
+  height: 550px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:800px) {
   .ServiceProviders {
-    display: flex;
-    height: 550px;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
   }
+}
 
-  @media (max-width:800px) {
-    .ServiceProviders {
-      flex-direction: column;
-    }
-  }
+.HeaderSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .HeaderSection {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.ServicesInfoText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .ServicesInfoText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.Header4 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #042940;
+}
 
-  .Header4 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #042940;
-  }
+.Line2 {
+  height: 5px;
+  margin: 20px 20px;
+  background-color: #042940;
+}
 
+@media only screen and (max-width:800px) {
   .Line2 {
-    height: 5px;
-    margin: 20px 20px;
-    background-color:#042940;
+    width: 350px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .Line2 {
-        width: 350px;
-    }
-  }
+.ServiceProvidersText {
+  font-weight: bold;
+  color: #042940;
+}
 
-  .ServiceProvidersText {
-    font-weight: bold;
-    color: #042940;
-  }
+.ContentBoxs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 300px;
+  width: 100%;
+}
 
+@media (max-width: 800px) {
   .ContentBoxs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    height: 300px;
-    width: 100%;
+    flex-direction: column;
   }
+}
 
-  @media (max-width: 800px) {
-    .ContentBoxs {
-      flex-direction: column;
-    }
+@media only screen and (max-width:800px) {
+  .ContentBoxs {
+    margin-top: 800px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .ContentBoxs {
-      margin-top: 800px;
-    }
-  }
+.ContentBox1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 300px;
+  margin: 10px 100px 10px 10px;
+  border-radius: 20px;
+  background-color: #042940;
+}
 
+@media only screen and (max-width:800px) {
   .ContentBox1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 450px;
-    width: 300px;
-    margin: 10px 100px 10px 10px;
-    border-radius: 20px;
-    background-color:#042940;
-  }
-
-  @media only screen and (max-width:800px) {
-    .ContentBox1 {
-      margin: 10px 10px 10px 10px;
-    }
-  }
-
-  /* Box1 Content */
-  .ContentBoxImage1 {
-    height: 200px;
-    width: 280px;
-    margin: 10px 10px;
-    border-radius: 15px;
-    background-color: white;
-  }
-
-  
-
-  .ContentHeader1{
-    font-size: 30px;
-    color: #9fc131;
-    font-weight: bold;
-  }
-
-  .ContentBoxText1 {
-    color: white;
-    text-align: center;
-  }
-
-  .ContentBoxIcons {
-    margin: 20px 20px;
-  }
-
-  .ContentBoxIcons i {
-    font-size: 25px;
-    margin: 0px 20px 0 20px;
-    color: #9fc131;
-  }
-  /* Box1 Content */
-
-  .ContentBox2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 450px;
-    width: 300px;
     margin: 10px 10px 10px 10px;
-    border-radius: 20px;
-    background-color:#042940;
   }
+}
 
-  /* Box2 Content */
-  .ContentBoxImage2 {
-    height: 200px;
-    width: 280px;
-    margin: 10px 10px;
-    border-radius: 15px;
-    background-color: white;
-  }
+/* Box1 Content */
+.ContentBoxImage1 {
+  height: 200px;
+  width: 280px;
+  margin: 10px 10px;
+  border-radius: 15px;
+  background-color: white;
+}
 
-  .ContentHeader2{
-    font-size: 30px;
-    color: #9fc131;
-    font-weight: bold;
-  }
 
-  .ContentBoxText2 {
-    color: white;
-  }
 
-  .ContentBoxIcons i {
-    font-size: 25px;
-    margin: 0px 20px 0 20px;
-    color: #9fc131;
-  }
-  /* Box2 Content */
+.ContentHeader1 {
+  font-size: 30px;
+  color: #9fc131;
+  font-weight: bold;
+}
 
+.ContentBoxText1 {
+  color: white;
+  text-align: center;
+}
+
+.ContentBoxIcons {
+  margin: 20px 20px;
+}
+
+.ContentBoxIcons i {
+  font-size: 25px;
+  margin: 0px 20px 0 20px;
+  color: #9fc131;
+}
+
+/* Box1 Content */
+
+.ContentBox2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 300px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 20px;
+  background-color: #042940;
+}
+
+/* Box2 Content */
+.ContentBoxImage2 {
+  height: 200px;
+  width: 280px;
+  margin: 10px 10px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.ContentHeader2 {
+  font-size: 30px;
+  color: #9fc131;
+  font-weight: bold;
+}
+
+.ContentBoxText2 {
+  color: white;
+}
+
+.ContentBoxIcons i {
+  font-size: 25px;
+  margin: 0px 20px 0 20px;
+  color: #9fc131;
+}
+
+/* Box2 Content */
+
+.ContentBox3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 300px;
+  margin: 10px 10px 10px 100px;
+  border-radius: 20px;
+  background-color: #042940;
+}
+
+@media only screen and (max-width:800px) {
   .ContentBox3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 450px;
-    width: 300px;
-    margin: 10px 10px 10px 100px;
-    border-radius: 20px;
-    background-color:#042940;
+    margin: 10px 10px 10px 10px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .ContentBox3 {
-      margin: 10px 10px 10px 10px;
-    }
-  }
+/* Box3 Content */
+.ContentBoxImage3 {
+  height: 200px;
+  width: 280px;
+  margin: 10px 10px;
+  border-radius: 15px;
+  background-color: white;
+}
 
-   /* Box3 Content */
-   .ContentBoxImage3 {
-    height: 200px;
-    width: 280px;
-    margin: 10px 10px;
-    border-radius: 15px;
-    background-color: white;
-  }
+.ContentHeader3 {
+  font-size: 30px;
+  color: #9fc131;
+  font-weight: bold;
+}
 
-  .ContentHeader3{
-    font-size: 30px;
-    color: #9fc131;
-    font-weight: bold;
-  }
+.ContentBoxText3 {
+  color: white;
+}
 
-  .ContentBoxText3 {
-    color: white;
-  }
+.ContentBoxIcons i {
+  font-size: 25px;
+  margin: 0px 20px 0 20px;
+  color: #9fc131;
+}
 
-  .ContentBoxIcons i {
-    font-size: 25px;
-    margin: 0px 20px 0 20px;
-    color: #9fc131;
-  }
-  /* Box3 Content */
+/* Box3 Content */
 
 /* content */
 
 
 /* content */
+.ExtraContent2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #042940;
+  height: 500px;
+  width: 100%;
+}
+
+@media only screen and (max-width:800px) {
   .ExtraContent2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #042940;
-    height: 500px;
-    width: 100%;
+    margin-top: 800px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .ExtraContent2 {
-      margin-top: 800px;
-    }
-  }
+.ExtraContentHeader {
+  height: 300px;
 
-  .ExtraContentHeader {
-    height: 300px;
-  
-  }
+}
 
-  .ExtraContentText1 {
-    font-size: 30px;
-    color: #9fc131;
-    font-weight: bold;
-    margin-bottom: 70px;
-  }
+.ExtraContentText1 {
+  font-size: 30px;
+  color: #9fc131;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+
+.Line3 {
+  height: 2px;
+  width: 700px;
+  margin: 20px 20px;
+  background-color: white;
+}
+
+@media only screen and (max-width:800px) {
   .Line3 {
-    height: 2px;
-    width: 700px;
-    margin: 20px 20px;
-    background-color: white;
+    width: 350px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .Line3 {
-      width: 350px;
-    }
-  }
+.ExtraContentText2 {
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+}
 
-  .ExtraContentText2 {
-    font-size: 10px;
-    color: white;
-    font-weight: bold;
-  }
+.SignUp {
+  border-style: none;
+  background-color: white;
+  color: #042940;
+  border-radius: 7px;
+  height: 30px;
+  width: 100px;
+  margin: 20px 20px;
+}
 
-  .SignUp {
-    border-style: none;
-    background-color: white;
-    color: #042940;
-    border-radius: 7px;
-    height: 30px;
-    width: 100px;
-    margin: 20px 20px;
-  }
+.LearnMoreButton {
+  border-style: solid;
+  border-color: #9fc131;
+  background-color: transparent;
+  color: #9fc131;
+  border-radius: 7px;
+  height: 30px;
+  width: 130px;
+  margin: 20px 20px;
+}
 
-  .LearnMoreButton {
-    border-style: solid;
-    border-color: #9fc131;
-    background-color: transparent;
-    color:#9fc131;
-    border-radius: 7px;
-    height: 30px;
-    width: 130px;
-    margin: 20px 20px;
-  }
+.ExtraContentButtons {
+  display: flex;
+  justify-content: center;
+}
 
+@media only screen and (max-width:800px) {
   .ExtraContentButtons {
-    display: flex;
-    justify-content: center;
+    display: list-item;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .ExtraContentButtons {
-      display: list-item;
-    }
-  }
 /* content */
 
 /* content */
+.ContactUsContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  height: 550px;
+  width: 100%;
+}
+
+@media (max-width:800px) {
   .ContactUsContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    height: 550px;
-    width: 100%;
+    flex-direction: column;
   }
+}
 
-  @media (max-width:800px) {
-    .ContactUsContent {
-      flex-direction: column;
-    }
-  }
+.ContactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #042940;
+  height: 500px;
+  width: 500px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #9fc131;
+}
 
+@media only screen and (max-width:800px) {
   .ContactForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #042940;
-    height: 500px;
-    width: 500px;
-    border-radius: 20px;
-    border-style: solid;
-    border-color: #9fc131;
+    margin-top: 10px;
+    height: 400px;
+    width: 300px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .ContactForm {
-      margin-top: 10px;
-      height: 400px;
-      width: 300px;
-    }
-  }
+.Header5 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #9fc131;
+}
 
-  .Header5 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #9fc131;
-  }
+.ContactForm p {
+  color: white;
+}
 
-  .ContactForm p{
-    color: white;
-  }
+.ImageBox2 {
+  height: 500px;
+  width: 500px;
+  margin-right: 300px;
+}
 
+@media only screen and (max-width:800px) {
   .ImageBox2 {
-    height: 500px;
-    width: 500px;
-    margin-right: 300px;
+    height: 300px;
+    width: 300px;
+    margin-right: 0px;
+    display: none;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .ImageBox2 {
-      height: 300px;
-      width: 300px;
-      margin-right: 0px;
-      display: none;
-    }
+.ImageBox2 img {
+  height: 500px;
+  width: 500px;
+}
+
+@media only screen and (max-width:800px) {
+  .ImageBox2 img {
+    height: 300px;
+    width: 300px;
   }
+}
 
-  .ImageBox2 img{
-    height: 500px;
-    width: 500px;
-  }
+.Name {
+  width: 400px;
+  height: 30px;
+  margin-bottom: 20px;
+}
 
-  @media only screen and (max-width:800px) {
-    .ImageBox2 img {
-      height: 300px;
-      width: 300px;
-    }
-  }
-
+@media only screen and (max-width:800px) {
   .Name {
-    width: 400px;
-    height: 30px;
-    margin-bottom: 20px;
+    width: 250px;
   }
+}
 
-  @media only screen and (max-width:800px) {
-    .Name {
-      width: 250px;
-    }
-  }
+.Email {
+  width: 400px;
+  height: 30px;
+  margin-bottom: 20px;
+}
 
+@media only screen and (max-width:800px) {
   .Email {
-    width: 400px;
-    height: 30px;
-    margin-bottom: 20px;
+    width: 250px;
   }
-
-  @media only screen and (max-width:800px) {
-    .Email {
-      width: 250px;
-    }
-  }
+}
 
 
+.Message {
+  height: 70px;
+  width: 400px;
+}
+
+@media only screen and (max-width:800px) {
   .Message {
-    height: 70px;
-    width: 400px;
+    width: 250px;
   }
-
-  @media only screen and (max-width:800px) {
-    .Message {
-      width: 250px;
-    }
-  }
+}
 
 
-  .Submit {
-    background-color: #9fc131;
-    margin-top: 30px;
-    height: 30px;
-    width: 100px;
-    border-radius: 10px;
-    border-style: none;
-    color:#042940;
-  }
+.Submit {
+  background-color: #9fc131;
+  margin-top: 30px;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  border-style: none;
+  color: #042940;
+}
+
 /* content */
 
 /* content */
@@ -1401,4 +1437,5 @@
   font-size: 20px;
   color: white;
 }
+
 /* content */
