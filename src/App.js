@@ -14,7 +14,7 @@ function App() {
   const actionCodeSettings = {
     // URL you want to redirect back to. The domain (www.example.com) for this
     // URL must be in the authorized domains list in the Firebase Console.
-    url: 'https://mobmed-user.netlify.app',
+    url: 'https://6352523dc9f6a95dae179f1e--mobmed-user.netlify.app',
     // This must be true.
     handleCodeInApp: true,
   };
