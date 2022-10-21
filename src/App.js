@@ -200,8 +200,8 @@ function App() {
               <div className='FormHeader'>Sign Up</div>
               <div className='FormText'>Provide medical services using mobile medication sign up here.</div>
               <div className='FormInputs'>
-                {/* <input  type='text' placeholder='Name'/><br></br> */}
-                {/* <input type='text' placeholder='Surname'/><br></br> */}
+                <input  type='text' placeholder='Name'/><br></br>
+                <input type='text' placeholder='Surname'/><br></br>
                 <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} /><br></br>
                 <input type='password' placeholder='password' onChange={(e) => setPassword(e.target.value)} /><br></br>
               </div>
