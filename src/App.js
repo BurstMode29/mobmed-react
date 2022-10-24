@@ -5,7 +5,7 @@ import app from './firebase';
 import React, { useState } from 'react';
 
 function App() {
-  
+
   // Firebase-Auth
   const auth = getAuth(app);
   const [email, setEmail] = useState("")
@@ -58,17 +58,17 @@ function App() {
 
   // Menu Button
   function Menu() {
-    var x = document.getElementById("Nav");
-    if (x.style.left === "-350px") {
-      x.style.left = "-20px";
-      x.style.boxShadow = "2px 1px 30px #888888";
-      document.getElementById("MenuBox").style.opacity = "100%";
-      document.getElementById("MenuIcon").style.color = "white";
+    var x = document.getElementById("MNav");
+    if (x.style.left === "0px") {
+      // x.style.left = "-20px";
+      // x.style.boxShadow = "2px 1px 30px #888888";
+      // document.getElementById("MenuBox").style.opacity = "100%";
+      // document.getElementById("MenuIcon").style.color = "white";
     } else {
-      x.style.left = "-350px"
-      x.style.boxShadow = "none";
-      document.getElementById("MenuBox").style.opacity = "0%";
-      document.getElementById("MenuIcon").style.color = "#042940";
+      // x.style.left = "-350px"
+      // x.style.boxShadow = "none";
+      // document.getElementById("MenuBox").style.opacity = "0%";
+      // document.getElementById("MenuIcon").style.color = "#042940";
     }
   };
   // Menu Button
@@ -78,7 +78,7 @@ function App() {
     var y = document.getElementById("LoginDrop");
     if (y.style.height === "0px") {
       y.style.height = "200px";
-      document.getElementById("Links").style.top = "350px";
+      document.getElementById("MLinks").style.top = "90px";
       document.getElementById("LB1").style.left = "0px";
       document.getElementById("LB2").style.left = "0px";
       document.getElementById("LB3").style.left = "0px";
@@ -87,10 +87,10 @@ function App() {
 
     } else {
       y.style.height = "0px"
-      document.getElementById("Links").style.top = "110px";
-      document.getElementById("LB1").style.left = "-400px";
-      document.getElementById("LB2").style.left = "-400px";
-      document.getElementById("LB3").style.left = "-400px";
+      document.getElementById("MLinks").style.top = "400px";
+      document.getElementById("LB1").style.left = "-700px";
+      document.getElementById("LB2").style.left = "-700px";
+      document.getElementById("LB3").style.left = "-700px";
       document.getElementById("LB4").style.opacity = "0%";
       document.getElementById("LoginArrow").style.color = "white";
 
@@ -122,6 +122,24 @@ function App() {
 
   // /Sign-Up-Forms
 
+  // Slide Buttons
+
+  // function MoveLeft() {
+  //  var doctors = document.getElementsByClassName("ContentBox1");
+  //  if (doctors.style.margin == "830px"){
+  //   doctors.style.margin = "10px";
+  //  }else {
+  //   doctors.style.margin = "830px"
+  //  }
+  // }
+
+  // function MoveRight() {
+
+  // }
+
+
+  // Slide Buttons
+
   return (
     <div className="App">
       <div className='Loading'></div>
@@ -130,10 +148,23 @@ function App() {
 
         <div className='HomeContent'>
 
-          <div className='Logo'><i class="fa-solid fa-heart-pulse"></i>MOB<span className='span1'>MED</span></div>
+          <div className='Logo'>
 
-          <div className='Navigation' id='Nav'>
+            <div className='MenuLogo'><i class="fa-solid fa-heart-pulse"></i>MOB<span className='span1'>MED</span></div>
+            <div className='MenuIcon' id='MenuIcon' onClick={Menu}><div className='MenuBox' id='MenuBox'><i class="fa-solid fa-bars"></i></div></div>
+            <div className='Navigation' id='Nav'>
+            <div className='NavLinks' id='Links'>
+              <div className='LoginLink'><a href='#'>LOGIN</a></div>
+                <div><a href='#'>ABOUT</a></div>
+                <div><a href='#'>SERVICES</a></div>
+                <div><a href='#'>CONTACT</a></div>
+              </div>
+            </div>
+          </div>
 
+          
+
+          <div className='MobileNav' id='MNav'>
             <div className='MobileNavHead'>
               <div className='NavLogo'><i class="fa-solid fa-heart-pulse"></i>MOB
                 <span className='span3'>MED</span></div>
@@ -158,12 +189,11 @@ function App() {
               </div>
             </div>
 
-            <div className='NavLinks' id='Links'>
-
+            <div className='MobileLinks' id='MLinks'>
+              <div className='SignUpLink'><a href='#'>LOGIN</a></div>
               <div><a href='#'>ABOUT</a></div>
               <div><a href='#'>SERVICES</a></div>
               <div><a href='#'>CONTACT</a></div>
-
             </div>
 
             <div className='MobileMenuFooter'>
@@ -172,11 +202,9 @@ function App() {
             </div>
           </div>
 
-          <div className='MenuBox' id='MenuBox'></div>
 
-          <div className='MenuIcon' id='MenuIcon' onClick={Menu}>
-            <i class="fa-solid fa-bars"></i>
-          </div>
+
+
         </div>
 
 
@@ -200,8 +228,8 @@ function App() {
               <div className='FormHeader'>Sign Up</div>
               <div className='FormText'>Provide medical services using mobile medication sign up here.</div>
               <div className='FormInputs'>
-                <input  type='text' placeholder='Name'/><br></br>
-                <input type='text' placeholder='Surname'/><br></br>
+                <input type='text' placeholder='Name' /><br></br>
+                <input type='text' placeholder='Surname' /><br></br>
                 <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} /><br></br>
                 <input type='password' placeholder='password' onChange={(e) => setPassword(e.target.value)} /><br></br>
               </div>
@@ -248,7 +276,7 @@ function App() {
         <div className='Continue'>
           <div >
             <p>LEARN MORE</p>
-            <div><i class="fa-sharp fa-solid fa-arrow-down"></i></div>
+            <div className='ArrowBox'><i class="fa-sharp fa-solid fa-arrow-down"></i></div>
           </div>
         </div>
 
@@ -259,10 +287,10 @@ function App() {
 
           <div className='InfoContentText'>
             <div className='Header2'>WHO IS MOBMED?</div>
-            <div className='Line'></div>
-            <p> Velit ex Lorem in sunt officia aliquip nisi excepteur aliquip quis nisi ut.<br></br>
-              Est est duis elit eiusmod ad id irure est enim nisi culpa. Velit non ullamco cillum sunt occaecat ea cillum adipisicing mollit et.<br></br>
-              Aliqua sunt cupidatat labore non Lorem in cupidatat duis. Consectetur velit exercitation nisi cupidatat nisi amet nulla.<br></br>
+            <div className='LineBox'><div className='Line'></div></div>
+            <p> Velit ex Lorem in sunt officia aliquip nisi excepteur aliquip quis nisi ut.
+              Est est duis elit eiusmod ad id irure est enim nisi culpa. Velit non ullamco cillum sunt occaecat ea cillum adipisicing mollit et.
+              Aliqua sunt cupidatat labore non Lorem in cupidatat duis. Consectetur velit exercitation nisi cupidatat nisi amet nulla.
               Consectetur occaecat eu et non reprehenderit elit aute est adipisicing nisi sint.
             </p>
           </div>
@@ -290,14 +318,18 @@ function App() {
               <div className='ServiceInfoText'>
                 <div>
                   <div className='Header3'>OUR SERVICES</div>
-                  <div className='Line1'></div>
-                  <p>
-                    Elit aute tempor adipisicing sunt proident quis id deserunt aliquip cupidatat irure ipsum. Reprehenderit consequat ullamco cillum aliquip cupidatat ipsum est eiusmod nisi dolore do proident sint. Qui anim proident qui occaecat Lorem excepteur amet occaecat est.
-                    Nulla culpa minim nostrud sunt eiusmod nisi. Ipsum voluptate enim Lorem commodo non mollit Lorem aute laboris nostrud minim sit sint. Culpa adipisicing labore velit esse sint nulla exercitation dolor magna occaecat nulla sint. Ad tempor in anim non exercitation sunt anim cillum.
-                    Consectetur magna amet sint sint. Nulla consectetur dolor reprehenderit adipisicing laboris voluptate ipsum id ullamco minim qui ullamco qui.<br></br>
-                    Minim incididunt occaecat sint voluptate ea dolore Lorem proident voluptate occaecat esse id do. Ex laborum veniam adipisicing occaecat incididunt labore occaecat culpa occaecat pariatur.
-                    Duis do do ipsum eiusmod laboris. Est anim mollit magna anim.<br></br> <br></br>
-                  </p>
+                  <div className='LineBox'><div className='Line1'></div></div>
+
+                  <div className='OurServicesTextBox'>
+                    <p>
+                      Elit aute tempor adipisicing sunt proident quis id deserunt aliquip cupidatat irure ipsum. Reprehenderit consequat ullamco cillum aliquip cupidatat ipsum est eiusmod nisi dolore do proident sint. Qui anim proident qui occaecat Lorem excepteur amet occaecat est.
+                      Nulla culpa minim nostrud sunt eiusmod nisi. Ipsum voluptate enim Lorem commodo non mollit Lorem aute laboris nostrud minim sit sint. Culpa adipisicing labore velit esse sint nulla exercitation dolor magna occaecat nulla sint. Ad tempor in anim non exercitation sunt anim cillum.
+                      Consectetur magna amet sint sint. Nulla consectetur dolor reprehenderit adipisicing laboris voluptate ipsum id ullamco minim qui ullamco qui.<br></br>
+                      Minim incididunt occaecat sint voluptate ea dolore Lorem proident voluptate occaecat esse id do. Ex laborum veniam adipisicing occaecat incididunt labore occaecat culpa occaecat pariatur.
+                      Duis do do ipsum eiusmod laboris. Est anim mollit magna anim.<br></br> <br></br>
+                    </p>
+                  </div>
+
                 </div>
 
               </div>
@@ -314,7 +346,7 @@ function App() {
         <div className='HeaderSection'>
           <div>
             <div className='Header4'>WHO USES MOBMED?</div>
-            <div className='Line2'></div>
+            <div className='LineBox'><div className='Line2'></div></div>
             <p className='ServiceProvidersText'>
               Duis aliqua pariatur ut enim aliqua proident enim officia do ex tempor cillum amet ullamco.
             </p>
@@ -322,7 +354,7 @@ function App() {
         </div>
         <div className='ServiceProviders'>
           <div className='ContentBoxs'>
-
+            {/* <div className='MoveLeft' onClick={MoveLeft}><i class="fa-solid fa-chevron-left"></i></div> */}
             <div className='ContentBox1'>
               <div>
                 <div className='ContentBoxImage1'></div>
@@ -374,6 +406,7 @@ function App() {
 
               </div>
             </div>
+            {/* <div className='MoveRight' onClick={MoveRight}><i class="fa-solid fa-chevron-right"></i></div> */}
           </div>
         </div>
 
@@ -384,7 +417,7 @@ function App() {
           <div>
             <div className='ExtraContentHeader'>
               <p className='ExtraContentText1'>Occaecat nisi qui mollit voluptate voluptate id officia?</p>
-              <div className='Line3'></div>
+              <div className='LineBox'><div className='Line3'></div></div>
               <p className='ExtraContentText2'>Occaecat nisi qui mollit voluptate voluptate id officia consectetur dolore do in.</p>
             </div>
             <div className='ExtraContentButtons'>

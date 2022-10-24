@@ -4,15 +4,22 @@
 }
 
 /* content */
+
+/* Box Containing Mobmed Logo and MenuIcon*/
 .Logo {
-  position: absolute;
-  margin: 20px 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  float: left;
+  width: 100%;
   color: #9fc131;
   font-weight: bold;
   animation-name: slide-in-logo;
   animation-duration: 2s;
 }
 
+/* This is the .Logo box slide animation */
 @keyframes slide-in-logo {
   from {
     left: -100px;
@@ -23,29 +30,36 @@
   }
 }
 
+/* This is the logo in the top left */
+.MenuLogo {
+  margin: 5px 5px;
+}
+
+/* This is the span to change the color of the logo in the top left only for the part "MED" */
 .span1 {
   color: #042940;
 }
 
 /* Mobile Menu */
+
+/* This is the menu icon in the top right corner */
 .MenuIcon {
   float: right;
-  margin: 20px 20px;
+  position: relative;
+  margin: 5px 5px;
   font-size: 20px;
   color: #042940;
   display: none;
 }
 
-@media only screen and (max-width:800px) {
+/* This says if the screen with is less than 1200px, then the menu button will display */
+@media only screen and (max-width:1200px) {
   .MenuIcon {
     display: initial;
-    margin: 20px 25px;
-    position: fixed;
-    right: -5px;
   }
 }
 
-@media only screen and (max-width:800px) {
+/* @media only screen and (max-width:1200px) {
   .MenuBox {
     height: 60px;
     width: 60px;
@@ -56,33 +70,76 @@
     transition: opacity 2s;
   }
 
-}
+} */
 
-.MobileNavHead {
-  position: absolute;
-  background-color: white;
-  color: #042940;
-  font-weight: bold;
-  top: 0px;
-  height: 60px;
-  width: 100%;
-  display: none;
-}
-
-@media only screen and (max-width:800px) {
-  .MobileNavHead {
-    display: block;
+@media only screen and (max-width:1200px) {
+  .MobileNav {
+    background-color: white;
+    z-index: 1;
+    left: 0.1px;
+    height: 100%;
+    width: 90%;
+    right: 40px;
+    border-radius: 5px;
+    position: fixed;
+    transition: left 1s;
+    box-shadow: 2px 1px 30px #888888;
   }
 }
 
+.MobileLinks {
+  position: relative;
+  display: none;
+}
+
+.MobileLinks a {
+  margin: 5px 5px;
+  text-decoration-line: none;
+  font-weight: bold;
+  color: #042940;
+}
+
+.MobileLinks .SignUpLink  a{
+  color: #9fc131;
+}
+
+@media only screen and (max-width:1200px) {
+  .MobileLinks {
+    font-size: 30px;
+    top: 90px;
+    display: block;
+    transition: top 0.2s;
+  }
+}
+
+.MobileNavHead {
+  background-color: white;
+  color: #042940;
+  font-weight: bold;
+  height: 60px;
+  width: 100%;
+}
 
 .NavLogo {
   position: absolute;
   top: 10px;
-  left: 3px;
   color: #042940;
+  display: none;
 }
 
+@media only screen and (max-width:1200px) {
+  .MobileNavHead {
+    display: block;
+  }
+
+  .NavLogo {
+    display: block;
+  }
+
+  .MobileNavHead p {
+    display: block;
+  }
+}
 .MobileNavHead i {
   margin: 2px 2px;
 }
@@ -94,6 +151,7 @@
   left: 3px;
   font-size: 12px;
   color: #042940;
+  display: none;
 }
 
 .LoginMobile {
@@ -107,13 +165,13 @@
   display: none;
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:1200px) {
   .LoginMobile {
     display: flex;
   }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:1200px) {
   .LoginArrow {
     position: absolute;
     right: 20px;
@@ -122,17 +180,14 @@
   }
 }
 
-
 .LoginTransition {
-  position: absolute;
+  position: relative;
   background-color: white;
-  top: 50px;
+  top: 120px;
   height: 0px;
   width: 100%;
   transition: height 0.7s;
 }
-
-
 
 .LoginMobileText {
   position: absolute;
@@ -218,23 +273,23 @@
   font-size: 20px;
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:1200px) {
   .LoginBox1 {
     position: relative;
     transition: left 0.2s;
-    left: -400px;
+    left: -700px;
   }
 
   .LoginBox2 {
     position: relative;
     transition: left 0.4s;
-    left: -400px;
+    left: -700px;
   }
 
   .LoginBox3 {
     position: relative;
     transition: left 0.6s;
-    left: -400px;
+    left: -700px;
   }
 
   .LoginBox4 {
@@ -248,13 +303,13 @@
   display: none;
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:1200px) {
   .MobileMenuFooter {
     position: absolute;
     display: block;
     left: 0;
     right: 0;
-    top: 760px;
+    top: 500px;
   }
 
   .MobileMenuFooter i {
@@ -272,48 +327,36 @@
 
 /* /Mobile Menu */
 
+/* Desktop Navigation Links */
 .NavLinks {
   display: flex;
 }
 
-@media only screen and (max-width:800px) {
+.NavLinks .LoginLink a{
+  color: #9fc131;
+}
+
+
+@media only screen and (max-width:1200px) {
   .NavLinks {
-    display: block;
-    position: absolute;
-    top: 110px;
-    left: 0;
-    right: 0;
-    transition: top 0.7s;
+    display: none;
   }
 }
 
 .Navigation {
-  position: absolute;
   flex-direction: row;
   margin: 20px 20px;
   right: 10px;
 }
+/* Desktop Navigation Links */
 
-@media (max-width:800px) {
+/* @media (max-width:800px) {
   .Navigation {
     flex-direction: column;
   }
-}
+} */
 
-@media only screen and (max-width:600px) {
-  .Navigation {
-    background-color: white;
-    z-index: 1;
-    top: -20px;
-    left: -350px;
-    height: 845px;
-    width: 330px;
-    right: 40px;
-    border-radius: 5px;
-    position: fixed;
-    transition: left 1s;
-  }
-}
+
 
 .Navigation a {
   margin: 5px 5px;
@@ -322,11 +365,11 @@
   color: #042940;
 }
 
-@media only screen and (max-width:600px) {
+/* @media only screen and (max-width:600px) {
   .Navigation a {
     color: #042940;
   }
-}
+} */
 
 .Navigation a:hover {
   color: #005C53;
@@ -349,12 +392,13 @@
 }
 
 .Pulse {
-  position: absolute;
-  top: 150px;
-  left: 0;
-  right: 0;
+  width: 100%;
+  height: 150px;
   font-size: 100px;
   color: #9fc131;
+}
+
+.Pulse i {
   animation-name: fall;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -444,13 +488,19 @@
   color: #042940;
 }
 
+/* I added an arrow because without it the animation will effect the surrounding content */
+.ArrowBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+}
+
 .Continue i {
   color: #9fc131;
   font-size: 30px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 850px;
+  padding-top: 5px;
   animation-name: PointDown;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
@@ -458,18 +508,13 @@
 
 @keyframes PointDown {
   from {
-    top: 850px;
-  }
-
-  to {
-    top: 860px;
+    padding-top: 50px;
   }
 
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:1200px) {
   .Continue i {
-    top: 1320px;
     animation-name: PointDownMobile;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
@@ -477,12 +522,9 @@
 
   @keyframes PointDownMobile {
     from {
-      top: 1320px;
+      padding-top: 50px;
     }
 
-    to {
-      top: 1330px;
-    }
   }
 
 }
@@ -566,7 +608,7 @@
   background-color: #042940;
 }
 
-@media (max-width:800px) {
+@media (max-width:1200px) {
   .InfoContent {
     flex-direction: column;
   }
@@ -576,24 +618,6 @@
   margin: 70px 100px 70px 70px;
 }
 
-@media only screen and (max-width:800px) {
-  .InfoContentText {
-    margin: 70px 70px 70px 70px;
-  }
-}
-
-.Header2 {
-  color: #9fc131;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.Line {
-  margin-top: 20px;
-  height: 3px;
-  width: 245px;
-  background-color: white;
-}
 
 .InfoContent p {
   color: white;
@@ -606,11 +630,48 @@
   }
 }
 
+@media only screen and (max-width:1200px) {
+  .InfoContentText {
+    text-align: center;
+    margin: 70px 70px 70px 70px;
+  }
+
+  .LineBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.Header2 {
+  color: #9fc131;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* The Line needs to be centered when the page width is less than 1200px so I'll create a box for the line.*/
+.Line {
+  margin-top: 20px;
+  height: 3px;
+  width: 245px;
+  background-color: white;
+}
+
+
+
 .ImageBox {
   height: 400px;
   width: 400px;
   border-radius: 20px;
   background-color: white;
+}
+
+@media only screen and (max-width:1200px) {
+  .ImageBox {
+    height: 400px;
+    width: 400px;
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width:800px) {
@@ -778,28 +839,28 @@
 
 /* Who Is MOBMED */
 .ExtraContent {
-  margin: 50px 50px;
   text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-@media (max-width:800px) {
+@media (max-width:1200px) {
   .ExtraContent {
     flex-direction: column;
   }
 }
 
 
-
+/* This here contains my diamond boxs and our services info */
 .Icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 200px 50px 50px;
+  margin: 50px 300px 50px 50px;
 }
 
 @media only screen and (max-width:800px) {
@@ -808,6 +869,13 @@
   }
 }
 
+@media only screen and (max-width:1200px) {
+  .Icons {
+    margin: 50px 50px 50px 50px;
+  }
+}
+
+/* To keep my icons straight I had to rotate it -45deg as I rotated the box 45deg*/
 .D1 i {
   rotate: -45deg;
 }
@@ -940,6 +1008,7 @@
   rotate: 45deg;
 }
 
+/* These are the icons within the rotated boxes */
 .DiamondIcon1 {
   display: flex;
   justify-content: center;
@@ -978,6 +1047,12 @@
 
 }
 
+@media only screen and (max-width:1200px) {
+  .Header3 {
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width:800px) {
   .Header3 {
     margin-top: 800px;
@@ -994,6 +1069,20 @@
   width: 300px;
   font-weight: bold;
   color: #042940;
+}
+
+.OurServicesTextBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width:1200px) {
+  .ServicesInfo p {
+    width: 100%;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+  }
 }
 
 
@@ -1063,15 +1152,29 @@
   width: 100%;
 }
 
-@media (max-width: 800px) {
+/* .MoveLeft {
+  font-size: 30px;
+  left: 100px;
+  position: absolute;
+}
+
+.MoveRight {
+  font-size: 30px;
+  position: absolute;
+} */
+
+@media (max-width: 1200px) {
   .ContentBoxs {
-    flex-direction: column;
+    overflow: auto;
+    height: 500px;
+    width: 400px;
   }
 }
 
-@media only screen and (max-width:800px) {
+
+@media (max-width: 800px) {
   .ContentBoxs {
-    margin-top: 800px;
+    flex-direction: column;
   }
 }
 
@@ -1086,9 +1189,17 @@
   background-color: #042940;
 }
 
+@media only screen and (max-width:1200px) {
+  .ContentBox1 {
+    margin: 10px 100px 10px 830px;
+  }
+}
+
+
+
 @media only screen and (max-width:800px) {
   .ContentBox1 {
-    margin: 10px 10px 10px 10px;
+    margin: 800px 10px 10px 10px;
   }
 }
 
@@ -1221,11 +1332,11 @@
   width: 100%;
 }
 
-@media only screen and (max-width:800px) {
+/* @media only screen and (max-width:800px) {
   .ExtraContent2 {
-    margin-top: 800px;
+    margin-top: 00px;
   }
-}
+} */
 
 .ExtraContentHeader {
   height: 300px;
@@ -1303,9 +1414,17 @@
   width: 100%;
 }
 
-@media (max-width:800px) {
+@media (max-width:1200px) {
   .ContactUsContent {
     flex-direction: column;
+    margin-bottom: 500px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .ContactUsContent {
+    flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
@@ -1319,6 +1438,12 @@
   border-radius: 20px;
   border-style: solid;
   border-color: #9fc131;
+}
+
+@media only screen and(max-width) {
+  .ContactForm {
+    
+  }
 }
 
 @media only screen and (max-width:800px) {
@@ -1342,7 +1467,14 @@
 .ImageBox2 {
   height: 500px;
   width: 500px;
-  margin-right: 300px;
+  margin-right: 150px;
+}
+
+@media only screen and (max-width:1200px) {
+  .ImageBox2 {
+    margin-right: 0;
+    margin-top: 500px;
+  }
 }
 
 @media only screen and (max-width:800px) {
