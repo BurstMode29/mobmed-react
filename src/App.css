@@ -1,6 +1,7 @@
 .App {
   font-family: 'Exo 2', sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 
 /* content */
@@ -32,7 +33,7 @@
 
 /* This is the logo in the top left */
 .MenuLogo {
-  margin: 5px 5px;
+  margin: 5px 15px;
 }
 
 /* This is the span to change the color of the logo in the top left only for the part "MED" */
@@ -1146,6 +1147,7 @@
 }
 
 .ServiceProvidersText {
+  font-size: 2vw;
   font-weight: bold;
   color: #042940;
 }
@@ -1567,7 +1569,7 @@
 }
 
 .FooterIcons i {
-  font-size: 30px;
+  font-size: 3vw;
   margin: 10px 50px 10px 50px;
   color: #9fc131;
 }
