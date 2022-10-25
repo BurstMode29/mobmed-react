@@ -60,15 +60,15 @@ function App() {
   function Menu() {
     var x = document.getElementById("MNav");
     if (x.style.left === "0px") {
-      // x.style.left = "-20px";
-      // x.style.boxShadow = "2px 1px 30px #888888";
+      x.style.left = "-1100px";
+      x.style.boxShadow = "none";
       // document.getElementById("MenuBox").style.opacity = "100%";
-      // document.getElementById("MenuIcon").style.color = "white";
+      document.getElementById("MenuIcon").style.color = "#9fc131";
     } else {
-      // x.style.left = "-350px"
-      // x.style.boxShadow = "none";
+      x.style.left = "0px";
+      x.style.boxShadow = "2px 1px 30px #888888";
       // document.getElementById("MenuBox").style.opacity = "0%";
-      // document.getElementById("MenuIcon").style.color = "#042940";
+      document.getElementById("MenuIcon").style.color = "#042940";
     }
   };
   // Menu Button
@@ -78,20 +78,20 @@ function App() {
     var y = document.getElementById("LoginDrop");
     if (y.style.height === "0px") {
       y.style.height = "200px";
-      document.getElementById("MLinks").style.top = "90px";
-      document.getElementById("LB1").style.left = "0px";
-      document.getElementById("LB2").style.left = "0px";
-      document.getElementById("LB3").style.left = "0px";
-      document.getElementById("LB4").style.opacity = "100%";
-      document.getElementById("LoginArrow").style.color = "#9fc131";
-
-    } else {
-      y.style.height = "0px"
-      document.getElementById("MLinks").style.top = "400px";
+      document.getElementById("MLinks").style.top = "50px";
       document.getElementById("LB1").style.left = "-700px";
       document.getElementById("LB2").style.left = "-700px";
       document.getElementById("LB3").style.left = "-700px";
       document.getElementById("LB4").style.opacity = "0%";
+      document.getElementById("LoginArrow").style.color = "#9fc131";
+
+    } else {
+      y.style.height = "0px"
+      document.getElementById("MLinks").style.top = "260px";
+      document.getElementById("LB1").style.left = "0px";
+      document.getElementById("LB2").style.left = "0px";
+      document.getElementById("LB3").style.left = "0px";
+      document.getElementById("LB4").style.opacity = "100%";
       document.getElementById("LoginArrow").style.color = "white";
 
     }
@@ -151,7 +151,7 @@ function App() {
           <div className='Logo'>
 
             <div className='MenuLogo'><i class="fa-solid fa-heart-pulse"></i>MOB<span className='span1'>MED</span></div>
-            <div className='MenuIcon' id='MenuIcon' onClick={Menu}><div className='MenuBox' id='MenuBox'><i class="fa-solid fa-bars"></i></div></div>
+            
             <div className='Navigation' id='Nav'>
             <div className='NavLinks' id='Links'>
               <div className='LoginLink'><a href='#'>LOGIN</a></div>
@@ -160,6 +160,7 @@ function App() {
                 <div><a href='#'>CONTACT</a></div>
               </div>
             </div>
+            <div className='MenuIcon' id='MenuIcon' onClick={Menu}><div className='MenuBox' id='MenuBox'><i class="fa-solid fa-bars"></i></div></div>
           </div>
 
           
@@ -190,7 +191,7 @@ function App() {
             </div>
 
             <div className='MobileLinks' id='MLinks'>
-              <div className='SignUpLink'><a href='#'>LOGIN</a></div>
+              <div className='SignUpLink'><a href='#'>SIGN UP</a></div>
               <div><a href='#'>ABOUT</a></div>
               <div><a href='#'>SERVICES</a></div>
               <div><a href='#'>CONTACT</a></div>

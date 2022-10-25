@@ -45,8 +45,10 @@
 /* This is the menu icon in the top right corner */
 .MenuIcon {
   float: right;
+  height: 40px;
+  width: 40px;
   position: relative;
-  margin: 5px 5px;
+  
   font-size: 20px;
   color: #042940;
   display: none;
@@ -55,7 +57,10 @@
 /* This says if the screen with is less than 1200px, then the menu button will display */
 @media only screen and (max-width:1200px) {
   .MenuIcon {
-    display: initial;
+    font-size: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -76,14 +81,15 @@
   .MobileNav {
     background-color: white;
     z-index: 1;
-    left: 0.1px;
+    left: -1100px;
     height: 100%;
-    width: 90%;
+    width: 90vw;
     right: 40px;
     border-radius: 5px;
     position: fixed;
     transition: left 1s;
     box-shadow: 2px 1px 30px #888888;
+  
   }
 }
 
@@ -105,8 +111,8 @@
 
 @media only screen and (max-width:1200px) {
   .MobileLinks {
-    font-size: 30px;
-    top: 90px;
+    font-size: 20px;
+    top: 50px;
     display: block;
     transition: top 0.2s;
   }
@@ -183,7 +189,8 @@
 .LoginTransition {
   position: relative;
   background-color: white;
-  top: 120px;
+  z-index: -1;
+  top: 30px;
   height: 0px;
   width: 100%;
   transition: height 0.7s;
