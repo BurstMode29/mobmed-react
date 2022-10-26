@@ -3,6 +3,8 @@ import contact from './images/contact_us.png';
 import { getAuth, createUserWithEmailAndPassword, sendSignInLinkToEmail } from "firebase/auth";
 import app from './firebase';
 import React, { useState } from 'react';
+import Doctors from './pages/Doctors';
+import { Link, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -115,12 +117,85 @@ function App() {
     var j = document.getElementById("Join");
     if (j.style.display === "block") {
       j.style.display = "none";
+      document.getElementById("PulseIcon").style.display = "none";
     } else {
       j.style.display = "block";
+      document.getElementById("PulseIcon").style.display = "block";
     }
   }
 
   // /Sign-Up-Forms
+
+  // Magic Button
+  function Swift() {
+    var magicButton = document.getElementById("SPF");
+    if (magicButton.style.width === "400px") {
+      magicButton.style.width = "0px";
+      // Business Side
+      document.getElementById("FI").style.display = "none";
+      document.getElementById("FH").style.display = "none";
+      document.getElementById("FT").style.display = "none";
+      document.getElementById("FS").style.display = "none";
+      document.getElementById("MB").style.display = "none";
+      document.getElementById("MagicButton").style.display = "none";
+      // Patients Form
+      document.getElementById("MP").style.display = "block";
+      document.getElementById("PF").style.width = "400px";
+      document.getElementById("FI1").style.display = "block";
+      document.getElementById("FH1").style.display = "block";
+      document.getElementById("FT1").style.display = "block";
+      document.getElementById("FB1").style.display = "block";
+      document.getElementById("MagicButton1").style.display = "block";
+    } else {
+      magicButton.style.width = "400px";
+    }
+  }
+
+  function Swift1() {
+    var magicButton1 = document.getElementById("PF"); {
+      if (magicButton1.style.width === "400px") {
+        magicButton1.style.width = "0px";
+        // Patients Form
+        document.getElementById("MP").style.display = "none";
+        // document.getElementById("PF").style.width = "400px";
+        document.getElementById("FI1").style.display = "none";
+        document.getElementById("FH1").style.display = "none";
+        document.getElementById("FT1").style.display = "none";
+        document.getElementById("FB1").style.display = "none";
+        document.getElementById("MagicButton1").style.display = "none";
+        // Business Side
+        document.getElementById("SPF").style.width = "400px";
+        document.getElementById("FI").style.display = "block";
+        document.getElementById("FH").style.display = "block";
+        document.getElementById("FT").style.display = "block";
+        document.getElementById("FS").style.display = "block";
+        document.getElementById("MB").style.display = "block";
+        document.getElementById("MagicButton").style.display = "block";
+      }
+    }
+  }
+  // Magic Button
+
+  // Desktop Login Drop-List 
+
+  function DLDL() {
+    var DLDropList = document.getElementById("DLDropList");
+    if (DLDropList.style.height === "0px") {
+      DLDropList.style.height = "200px";
+      document.getElementById("LoginLink").style.backgroundColor = "#042940";
+      document.getElementById("DLC").style.display = "block";
+      document.getElementById("DLC1").style.display = "block";
+      document.getElementById("DLC2").style.display = "block";
+      document.getElementById("DLC3").style.display = "block";
+    }else {
+      DLDropList.style.height = "0px";
+      document.getElementById("LoginLink").style.backgroundColor = "transparent";
+      document.getElementById("DLC").style.display = "none";
+      document.getElementById("DLC1").style.display = "none";
+      document.getElementById("DLC2").style.display = "none";
+      document.getElementById("DLC3").style.display = "none";
+    }
+  }
 
   // Slide Buttons
 
@@ -142,7 +217,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className='Loading'></div>
+      {/* <div className='Loading'></div> */}
+      <Routes>
+        <Route exact path="/home" element={<Doctors />} />
+      </Routes>
 
       <div className='Home'>
 
@@ -151,10 +229,17 @@ function App() {
           <div className='Logo'>
 
             <div className='MenuLogo'><i class="fa-solid fa-heart-pulse"></i>MOB<span className='span1'>MED</span></div>
-            
+
             <div className='Navigation' id='Nav'>
-            <div className='NavLinks' id='Links'>
-              <div className='LoginLink'><a href='#'>LOGIN</a></div>
+              <div className='NavLinks' id='Links'>
+                <div className='LoginLink' onClick={DLDL} id='LoginLink'><a href='#'>LOGIN</a>
+                  <div className='DesktopLoginDropDown' id='DLDropList'>
+                    <div className='DesktopLoginContent' id='DLC'><i class="fa-solid fa-user-doctor"></i><Link to="/doctors">DOCTOR</Link></div>
+                    <div className='DesktopLoginContent1' id='DLC1'><i class="fa-solid fa-truck-medical"></i>COURIERS</div>
+                    <div className='DesktopLoginContent2' id='DLC2'><i class="fa-solid fa-prescription-bottle-medical"></i>PHARMACIES</div>
+                    <div className='DesktopLoginContent3' id='DLC3'><i class="fa-solid fa-sort"></i></div>
+                  </div>
+                </div>
                 <div><a href='#'>ABOUT</a></div>
                 <div><a href='#'>SERVICES</a></div>
                 <div><a href='#'>CONTACT</a></div>
@@ -163,7 +248,7 @@ function App() {
             <div className='MenuIcon' id='MenuIcon' onClick={Menu}><div className='MenuBox' id='MenuBox'><i class="fa-solid fa-bars"></i></div></div>
           </div>
 
-          
+
 
           <div className='MobileNav' id='MNav'>
             <div className='MobileNavHead'>
@@ -211,7 +296,7 @@ function App() {
 
 
         <div className='HomeContent1'>
-          <div className='Pulse' id='Pulse'><i class="fa-solid fa-heart-pulse"></i></div>
+          <div className='Pulse' id='Pulse'><i class="fa-solid fa-heart-pulse" id='PulseIcon'></i></div>
           <div className='Header1'>YOUR DOCTOR ON HAND</div>
           <div className='Text1'>"ready to answer your call..."</div>
           <div className='Text2'>An <span className='span2'>online platform</span> made for medical services click to join.</div>
@@ -221,36 +306,69 @@ function App() {
 
 
         <div className='SignUpForm' id='Join'>
+
           <div className='CloseSignUpForm' id='close' onClick={close}><i class="fa-solid fa-xmark"></i></div>
-          <p>New to mobmed, simply sign up weather you're providing a service or seeking medical attention.</p>
+          {/* <p>New to mobmed, simply sign up weather you're providing a service or seeking medical attention.</p> */}
           <div className='D-and-P'>
+            <div className='MagicButton' onClick={Swift} id='MagicButton'></div>
+            <div className='ServiceProviderForm' id='SPF'>
+              <div>
+                <div className='FormHeader' id='FH'>Sign Up</div>
+                <div className='FormText' id='FT'>Provide medical services using mobile medication sign up here.</div>
 
-            <div className='ServiceProviderForm'>
-              <div className='FormHeader'>Sign Up</div>
-              <div className='FormText'>Provide medical services using mobile medication sign up here.</div>
-              <div className='FormInputs'>
-                <input type='text' placeholder='Name' /><br></br>
-                <input type='text' placeholder='Surname' /><br></br>
-                <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} /><br></br>
-                <input type='password' placeholder='password' onChange={(e) => setPassword(e.target.value)} /><br></br>
+
+                <div className='FormInputs' id='FI'>
+                  <input type='text' placeholder='Name' /><br></br>
+                  <input type='text' placeholder='Surname' /><br></br>
+                  <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} /><br></br>
+                  <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} /><br></br>
+                </div>
+                <input onClick={signUp} className='FormButton' type='submit' placeholder='Submit' id='FS' />
               </div>
-              <input onClick={signUp} className='FormButton' type='submit' placeholder='Submit' />
-
 
             </div>
 
-            <div className='PatientForm'>
-              <div className='FormHeader1'>Sign Up</div>
-              <div className='FormText1'>Looking for fast and reliable medical attention sign up here.</div>
-              <div className='FormInputs1'>
-                <input type='text' placeholder='Name' /><br></br>
-                <input type='text' placeholder='Surname' /><br></br>
-                <input type='email' placeholder='Email' /><br></br>
-              </div>
-              <input className='FormButton1' type='submit' placeholder='Submit' />
+            <div className='MobmedBusiness' id='MB'>
+              <div className='MBHeader'>Mobmed for your business</div>
+              <p>
+                Nostrud Lorem mollit mollit voluptate adipisicing est culpa tempor. Irure culpa pariatur qui duis. Est labore incididunt enim reprehenderit aute laborum magna est commodo laboris eiusmod quis labore cupidatat.
 
+                Eiusmod quis Lorem amet fugiat eu ut eiusmod culpa commodo nisi elit elit. Qui sint minim nulla qui duis nisi excepteur pariatur irure. Veniam elit esse occaecat consequat aliquip eu commodo in aliquip.
+
+                Eu fugiat dolore sunt aliquip aute incididunt cillum ipsum velit fugiat cupidatat aliqua commodo mollit. Sint fugiat et laboris dolore minim ex eu. Quis veniam cupidatat do dolor non ad excepteur sit sit aliquip. Ut Lorem officia esse elit anim aliqua nostrud dolore. Culpa non proident sunt ipsum ea laborum esse Lorem est labore et adipisicing anim adipisicing. Fugiat voluptate elit esse officia culpa Lorem labore ullamco est.
+              </p>
             </div>
+
+            <div className='MobmedPatients' id='MP'>
+              <div className='MPHeader'>Mobmed for your needs</div>
+              <p>
+                Nostrud Lorem mollit mollit voluptate adipisicing est culpa tempor. Irure culpa pariatur qui duis. Est labore incididunt enim reprehenderit aute laborum magna est commodo laboris eiusmod quis labore cupidatat.
+
+                Eiusmod quis Lorem amet fugiat eu ut eiusmod culpa commodo nisi elit elit. Qui sint minim nulla qui duis nisi excepteur pariatur irure. Veniam elit esse occaecat consequat aliquip eu commodo in aliquip.
+
+                Eu fugiat dolore sunt aliquip aute incididunt cillum ipsum velit fugiat cupidatat aliqua commodo mollit. Sint fugiat et laboris dolore minim ex eu. Quis veniam cupidatat do dolor non ad excepteur sit sit aliquip. Ut Lorem officia esse elit anim aliqua nostrud dolore. Culpa non proident sunt ipsum ea laborum esse Lorem est labore et adipisicing anim adipisicing. Fugiat voluptate elit esse officia culpa Lorem labore ullamco est.
+              </p>
+            </div>
+
+            <div className='PatientForm' id='PF'>
+              <div>
+                <div className='FormHeader1' id='FH1'>Sign Up</div>
+                <div className='FormText1' id='FT1' >Looking for fast and reliable medical attention sign up here.</div>
+
+
+                <div className='FormInputs1' id='FI1' >
+                  <input type='text' placeholder='Name' /><br></br>
+                  <input type='text' placeholder='Surname' /><br></br>
+                  <input type='email' placeholder='Email' /><br></br>
+                  <input type='password' placeholder='Password'></input>
+                </div>
+                <input className='FormButton1' type='submit' placeholder='Submit' id='FB1' />
+              </div>
+              
+            </div>
+            <div className='MagicButton1' onClick={Swift1} id='MagicButton1'></div>
           </div>
+          
         </div>
 
 
