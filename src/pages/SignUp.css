@@ -1,0 +1,87 @@
+.Form1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    flex-direction: row;
+}
+
+.MobileNav {
+    top: 1px;
+}
+
+@media only screen and (max-width:1200px) {
+    .Form1 {
+        flex-direction: column;
+    }
+}
+
+.Form1Header {
+    position: relative;
+    font-size: 30px;
+    top: -90px;
+}
+
+.Form1Text1 {
+    position: relative;
+    font-size: 20px;
+    top: -70px;
+}
+
+
+
+.BusinessForm {
+    background-color:#9fc131;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+}
+
+@media only screen and (max-width:800px) {
+    .BusinessForm {
+        width: 300px;
+    }
+}
+
+.Form1Text {
+    text-align: left;
+    width: 500px;
+    margin: 10px 10px;
+}
+
+@media only screen and (max-width:800px) {
+    .Form1Text {
+        width: 300px;
+        font-size: 10px;
+    }
+}
+
+.Form1Header2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin: 10px 10px;
+}
+
+@media only screen and (max-width:800px) {
+    .Form1Header2 {
+        font-size: 15px;
+    }
+}
+
+.Form1Inputs input {
+    margin: 5px 5px;
+    height: 20px;
+    width: 300px;
+}
+
+@media only screen and (max-width:800px) {
+    .Form1Inputs input {
+        width: 200px;
+    }
+}

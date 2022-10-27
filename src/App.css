@@ -549,6 +549,12 @@
   background-color: #042940;
 }
 
+@media only screen and (max-width:1200px) {
+  .JoinText {
+    display: none;
+  }
+}
+
 .Join:hover {
   cursor: pointer;
   box-shadow: 0 0 10px grey;
@@ -833,7 +839,6 @@
 }
 
 
-
 /* ServiceProviderForm */
 .ServiceProviderForm {
   height: 400px;
@@ -847,16 +852,12 @@
   transition: width 0.5s;
 }
 
-
-
 /* This the text content displayed along with the green form. */
 .MobmedBusiness {
   height: 400px;
   width: 350px;
   margin: 5px 5px;
 }
-
-
 
 .MBHeader {
   text-align: left;
@@ -865,13 +866,10 @@
   color: #042940;
 }
 
-
 .MobmedBusiness p {
   text-align: left;
   color: #888888;
 }
-
-
 
 /* Here is the sign up form content */
 .FormHeader {
@@ -1736,3 +1734,16 @@
 }
 
 /* content */
+
+/* Pages */
+.SignUpPage {
+  display: none;
+  text-decoration-line: none;
+  color: white;
+}
+
+@media only screen and (max-width:1200px) {
+  .SignUpPage {
+    display: block;
+  }
+}
