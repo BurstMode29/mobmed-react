@@ -1,0 +1,112 @@
+#DoctorsLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 70px;
+}
+
+.DoctorsHeader {
+    font-size: 30px;
+    color: #042940;
+}
+
+@media only screen and (max-width:800px) {
+    .DoctorsHeader {
+        font-size: 20px;
+    }
+}
+
+/* Form Header */
+.LoginHeader {
+    font-size: 3vw;
+    color: white;
+    margin: 5px 5px 5px 5px;
+    position: relative;
+    top: -70px;
+}
+
+@media only screen and (max-width:800px) {
+    .LoginHeader {
+        font-size: 20px;
+    }
+}
+
+
+.LoginForm {
+    background-color: #9fc131;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:800px) {
+    .LoginForm {
+        width: 250px;
+    }
+}
+
+/* Form Inputs */
+.LoginInputs {
+    position: relative;
+    top: -50px;
+}
+
+/* Form Inputs */
+.LoginInputs input {
+    margin: 5px 5px;
+    height: 40px;
+    width: 400px;
+}
+
+@media only screen and (max-width:800px) {
+    .LoginInputs input {
+        width: 200px;
+    }
+}
+
+/* Login Button */
+.LoginButton {
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 20px;
+    border-color: transparent;
+    cursor: pointer;
+    color: #042940;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:800px) {
+    .LoginButton {
+        height: 30px;
+    }
+}
+
+.LoginButton:hover {
+    box-shadow: 0px 0px 10px grey;
+    color: #9fc131;
+}
+
+/* Forgot your password link */
+.LoginPassWordReset {
+    position: relative;
+    top: 20px;
+    color: blue;
+}
+
+/* Login Footer */
+.LoginFooter {
+    margin-top: 200px;
+    color: #042940;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:800px) {
+    .LoginFooter {
+        margin-top: 250px;
+    } 
+}

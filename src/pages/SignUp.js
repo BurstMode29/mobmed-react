@@ -153,7 +153,12 @@ function SignUp() {
                 <input type='text' placeholder='Surname' /><br></br>
                 <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} /><br></br>
                 <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} /><br></br>
-              </div>
+                <select name='service' id='service'>
+                  <option value="doctor">Doctor</option>
+                  <option value="courier">Courier</option>
+                  <option value="pharmacist">Pharmacist</option>
+                </select><br></br>
+              </div><br></br>
               <input onClick={signUp} className='FormButton' type='submit' placeholder='Submit' id='FS' />
             </div>
           </div>
@@ -173,14 +178,39 @@ function SignUp() {
         </div>
       </div>
 
-      {/* <div>
-        <input type='text' placeholder='Name' /><br></br>
-        <input type='text' placeholder='Surname' /><br></br>
-        <input type='email' placeholder='Email' /><br></br>
-        <input type='password' placeholder='Password'></input>
-        <input className='FormButton1' type='submit' placeholder='Submit' id='FB1' />
-      </div> */}
+      <div className='Form1'>
+        {/* Patients Form */}
+        <div className='PatientsForm'>
+          <div>
+            <div>
+              <div>
+                <div className='Form1Header' id='FH'>Sign Up</div>
+                <div className='Form1Text1' id='FT'>Provide medical services using mobile medication sign up here.</div>
+              </div>
+              <div className='Form1Inputs'>
+                <input type='text' placeholder='Name' /><br></br>
+                <input type='text' placeholder='Surname' /><br></br>
+                <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} /><br></br>
+                <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} /><br></br>
+              </div>
+              <input onClick={signUp} className='FormButton' type='submit' placeholder='Submit' id='FS' />
+            </div>
+          </div>
+        </div>
+        {/* Patients Form Information */}
+        <div>
+          <div className='Form1Header2'>Mobmed for your Needs</div>
+          <div className='Form1Text'>
+            <div>
+              <p>Nostrud Lorem mollit mollit voluptate adipisicing est culpa tempor. Irure culpa pariatur qui duis. Est labore incididunt enim reprehenderit aute laborum magna est commodo laboris eiusmod quis labore cupidatat.
 
+                Eiusmod quis Lorem amet fugiat eu ut eiusmod culpa commodo nisi elit elit. Qui sint minim nulla qui duis nisi excepteur pariatur irure. Veniam elit esse occaecat consequat aliquip eu commodo in aliquip.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 

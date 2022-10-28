@@ -29,10 +29,22 @@
     top: -70px;
 }
 
+@media only screen and (max-width:1200px) {
+    .FormButton {
+        position: relative;
+        left: 10px;
+    }
+}
 
+
+#service {
+    position: relative;
+    right: 60px;
+}
 
 .BusinessForm {
-    background-color:#9fc131;
+    color: white;
+    background-color: #9fc131;
     border-radius: 10px;
     width: 500px;
     height: 500px;
@@ -62,6 +74,7 @@
 }
 
 .Form1Header2 {
+    color: #042940;
     font-size: 30px;
     font-weight: bold;
     text-align: left;
@@ -83,5 +96,24 @@
 @media only screen and (max-width:800px) {
     .Form1Inputs input {
         width: 200px;
+    }
+}
+
+/* Patients Form */
+.PatientsForm {
+    color: white;
+    background-color: #042940;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+}
+
+@media only screen and (max-width:800px) {
+    .PatientsForm {
+        width: 300px;
     }
 }

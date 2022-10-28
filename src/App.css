@@ -9,6 +9,7 @@
 /* Box Containing Mobmed Logo and MenuIcon*/
 .Logo {
   position: relative;
+  top: -10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +35,11 @@
 /* This is the logo in the top left */
 .MenuLogo {
   margin: 5px 15px;
+}
+
+.LogoLink {
+  text-decoration-line: none;
+  color: #9fc131;
 }
 
 /* This is the span to change the color of the logo in the top left only for the part "MED" */
@@ -791,6 +797,11 @@
   display: none;
 }
 
+#services {
+  position: absolute;
+  left: 234px;
+  border-color: transparent;
+}
 
 
 .MagicButton {
@@ -904,6 +915,8 @@
 }
 
 .FormButton {
+  position: relative;
+  left: 120px;
   height: 40px;
   width: 100px;
   border-radius: 20px;
@@ -984,6 +997,8 @@
 }
 
 .FormButton1 {
+  position: relative;
+  left: 100px;
   height: 40px;
   width: 100px;
   border-radius: 20px;

@@ -3,6 +3,7 @@ import Doctors from './pages/Doctors';
 import Home from './pages/Home';
 import { Link, Routes, Route } from 'react-router-dom';
 import SignUp from './pages/SignUp';
+import Couriers from './pages/Couriers';
 
 function App() {
   // Desktop Login Drop-List 
@@ -49,14 +50,14 @@ function App() {
       <>
         <div className='Logo'>
 
-          <Link to="/"><div className='MenuLogo'><i class="fa-solid fa-heart-pulse"></i>MOB<span className='span1'>MED</span></div></Link>
+          <div className='MenuLogo'><i class="fa-solid fa-heart-pulse"></i><Link className='LogoLink' to="/">MOB<span className='span1'>MED</span></Link></div>
 
           <div className='Navigation' id='Nav'>
             <div className='NavLinks' id='Links'>
               <div className='LoginLink' onClick={DLDL} id='LoginLink'><a href='#'>LOGIN</a>
                 <div className='DesktopLoginDropDown' id='DLDropList'>
                   <div className='DesktopLoginContent' id='DLC'><i class="fa-solid fa-user-doctor"></i><Link to="/doctors">DOCTOR</Link></div>
-                  <div className='DesktopLoginContent1' id='DLC1'><i class="fa-solid fa-truck-medical"></i>COURIERS</div>
+                  <div className='DesktopLoginContent1' id='DLC1'><i class="fa-solid fa-truck-medical"></i><Link to="/couriers">COURIERS</Link></div>
                   <div className='DesktopLoginContent2' id='DLC2'><i class="fa-solid fa-prescription-bottle-medical"></i>PHARMACIES</div>
                   <div className='DesktopLoginContent3' id='DLC3'><i class="fa-solid fa-sort"></i></div>
                 </div>
@@ -75,6 +76,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/sign_up" element={<SignUp/>} />
+          <Route path='/couriers' element={<Couriers />} />
         </Routes>
       </>
     </div>

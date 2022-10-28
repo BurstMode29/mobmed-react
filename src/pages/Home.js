@@ -80,7 +80,7 @@ function Home() {
         }
     }
     // Mobile-Menu-Login
-
+    
     // Sign-Up-Forms 
     function close() {
         var c = document.getElementById("Join");
@@ -89,8 +89,7 @@ function Home() {
         } else {
             c.style.display = "block";
         }
-    }
-
+    };
     function join() {
         var j = document.getElementById("Join");
         if (j.style.display === "block") {
@@ -100,7 +99,7 @@ function Home() {
             j.style.display = "block";
             document.getElementById("PulseIcon").style.display = "block";
         }
-    }
+    };
     // /Sign-Up-Forms
 
     // Magic Button
@@ -153,7 +152,7 @@ function Home() {
     }
     // Magic Button
 
-   
+
 
     return (
         <div>
@@ -232,6 +231,11 @@ function Home() {
                                     <input type='text' placeholder='Surname' /><br></br>
                                     <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} /><br></br>
                                     <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} /><br></br>
+                                    <select name='service' id='services'>
+                                        <option value="doctor">Doctor</option>
+                                        <option value="courier">Courier</option>
+                                        <option value="pharmacist">Pharmacist</option>
+                                    </select><br></br>
                                 </div>
                                 <input onClick={signUp} className='FormButton' type='submit' placeholder='Submit' id='FS' />
                             </div>
