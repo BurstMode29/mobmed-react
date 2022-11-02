@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../App.css';
+
 import contact from '../images/contact_us.png';
 import { getAuth, createUserWithEmailAndPassword, sendSignInLinkToEmail } from "firebase/auth";
 import app from '../firebase';
@@ -55,6 +56,8 @@ function Home() {
             });
     }
     // Firebase-Auth
+
+    
 
     // Mobile-Menu-Login 
     function DropList() {
@@ -466,27 +469,6 @@ function Home() {
 
             </div>
 
-
-            <div className='ContactUs'>
-                <div className='ContactUsContent'>
-                    <div className='ImageBox2'><img src={contact}></img></div>
-                    <div>
-                        <form className='ContactForm'>
-
-                            <div>
-                                <div className='Header5'>CONTACT US</div>
-                                <p>Occaecat pariatur sint aliquip labore aliqua sunt id consequat do anim. Minim sunt cupidatat veniam veniam aute.</p>
-                                <div className='Inputs'>
-                                    <input className='Name' type='text'></input><br></br>
-                                    <input className='Email' type='email'></input><br></br>
-                                    <input className='Message' type='text'></input><br></br>
-                                    <input className='Submit' type='submit'></input>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
 
 
             <div className='footer'>
